@@ -6,6 +6,8 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <h1 style="position: absolute; height: 100%; width: 100%; text-align: center; top: 40%; z-index: 10000; font-size: 50px;">Hi, I'm Aaron Moseley</h1>
+
 	<canvas id="canvas">Your browser doesn't support canvas</canvas>
 
 <!-- SVG Goo filter from: https://css-tricks.com/gooey-effect/ -->
@@ -13,7 +15,7 @@
     <defs>
       <filter id="shadowed-goo">
           
-          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="1" />
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
           <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
           <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
           <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
@@ -464,23 +466,6 @@ class Application {
         this.render();
 
         window.requestAnimationFrame(() => this.loop());
-
-	  const canvas = document.querySelector('#canvas');
-const context = canvas.getContext('2d');
-
-// Set font properties
-context.font = 'bold 50px Arial';
-context.fillStyle = 'black';
-context.textAlign = 'center';
-context.textBaseline = 'middle';
-
-// Get the center coordinates of the canvas
-const centerX = canvas.width / 2;
-const centerY = canvas.height / 2;
-
-// Draw the text in the center of the canvas
-context.fillText('Hi, I\'m Aaron Moseley', centerX, centerY);
-
     }
 }
 
@@ -575,6 +560,8 @@ class Circle {
 	  this.position.x = this.basePosition.x + Math.cos(this.angleCircle) * (Math.sin(this.angle + this.angleCircle) * this.bounceRadius + this.baseRadius);
         this.position.y = this.basePosition.y + Math.sin(this.angleCircle) * (Math.sin(this.angle + this.angleCircle) * this.bounceRadius + this.baseRadius);
         this.size = (Math.cos(this.angle) * 8) + this.baseSize;
+
+      console.log(this.position.y);
 
 	  this.size = (1 - Math.max(0, Math.min(this.position.y, cutoffY) / cutoffY)) * this.size;
 
