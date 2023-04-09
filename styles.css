@@ -293,44 +293,13 @@ svg{
   margin: 50px 0;
 }
 
-.job-experience-item {
-  position: relative;
-  padding: 0 0 0 80px;
-  margin: 50px 0;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-}
-
-.job-experience-item:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 25px;
-  width: 50px;
-  height: 50px;
-}
-
-.job-experience-item:nth-child(odd) {
-  flex-direction: row;
-  padding: 0 80px 0 0;
-  text-align: right;
-}
-
-.job-experience-item:nth-child(odd):before {
-  left: auto;
-  right: 0;
-  text-align: right;
-}
 
 .job-experience-date {
-  position: absolute;
-  left: 50%; /* updated this line */
-  transform: translateX(-50%); /* added this line */
+  position: relative;
   font-size: 16px;
   font-weight: bold;
   top: 50%; /* updated this line */
-  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .job-experience-title {
@@ -343,20 +312,6 @@ svg{
   font-size: 18px;
   margin-bottom: 20px;
   flex: 1;
-}
-
-.job-experience-description {
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  margin-right: 80px;
-  flex: 1;
-}
-
-.job-experience-description li {
-  margin-bottom: 10px;
 }
 
 .job-experience-content {
