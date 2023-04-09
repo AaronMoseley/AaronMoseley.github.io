@@ -567,7 +567,9 @@ class Circle {
      */
     update() {
 
-	  var cutoffY = 900;
+      var height = (screen.height * 1.4) * (screen.height / screen.width);
+
+	  var cutoffY = height;
 	  var maxSize = 40;
 
 	  this.position.x = this.basePosition.x + Math.cos(this.angleCircle) * (Math.sin(this.angle + this.angleCircle) * this.bounceRadius + this.baseRadius);
