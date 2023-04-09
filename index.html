@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Aaron Moseley - Portfolio</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<canvas id="canvas">Your browser doesn't support canvas</canvas>
+
+<!-- SVG Goo filter from: https://css-tricks.com/gooey-effect/ -->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+      <filter id="shadowed-goo">
+          
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="1" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+          <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+          <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+          <feBlend in2="shadow" in="goo" result="goo" />
+          <feBlend in2="goo" in="SourceGraphic" result="mix" />
+      </filter>
+      <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feBlend in2="goo" in="SourceGraphic" result="mix" />
+      </filter>
+    </defs>
+</svg>
+
+	<header>
+		<div>
+			<nav id="navbar" class="navbar nav">
+				<ul>
+					<li><a href="#about">About Me</a></li>
+					<li><a href="#skills">Skills</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#experience">Experience</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="AaronPic.jpg" class="personalpic" alt="Aaron Moseley">
+      </div>
+      <div class="col-md-6">
+        <h2>About Me</h2>
+        <p>
+I'm a junior in the Lewis Honors College at the University of Kentucky double-majoring in Computer Science and Mathematics, planning to graduate in May 2024. I'm currently working as a Lab Assistant for CS216 (Introduction to Software Engineering) and as a Research Assistant to Dr. Abdullah-Al-Zubaer Imran where I'm working on medical image segmentation research using machine learning. I'll be working as a CAD Software Engineering Intern at Infineon during the Summer of 2023.
+
+</br>
+</br>
+
+I'm primarily interested in artificial intelligence and machine learning but I have a wide variety of experience.
+</p>
+        <div class="buttons">
+          <a href="AaronMoseleyResume.pdf" target="_blank" download><button>Resume</button></a>
+	    <a href="https://github.com/AaronMoseley" target="_blank"><button>Github</button></a>
+          <a href="https://www.linkedin.com/in/aaron-moseley/" target="_blank"><button>LinkedIn</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+			<h2>Contact Information</h2>
+			<ul>
+				<li><b>Email:</b> amoseley018@gmail.com, amoseley018@uky.edu</li>
+				<li><b>Address:</b> Lexington, Kentucky</li>
+			</ul>
+		</section>
+
+<section id="skills">
+  <div class="container">
+    <h2>Skills</h2>
+    <ul>
+      <li>C++ / C</li>
+      <li>C# / .NET</li>
+	<li>Python</li>
+	<li>Java</li>
+	<li>PyTorch</li>
+	<li>Git / Github</li>
+	<li>Unity</li>
+	<li>HTML/CSS</li>
+	<li>Javascript</li>
+	<li>Linux</li>
+    </ul>
+  </div>
+</section>
+
+
+		<section id="projects">
+			<h2>Projects</h2>
+			<ul>
+<li>
+					<div class="project">
+						<img src="NOPTREX.png" alt="Project 1">
+						<div class="project-description">
+							<h2>NOPTREX Readout Software</h2>
+							<p>
+Presenting at NCUR 2023 and APS April Meeting 2023.
+</br>
+</br>
+A multi-channel readout software for the Neutron Optics Parity and Time-Reversal Experiment (NOPTREX). 
+The experiment is investigating time-reversal violations in low-energy neutron reactions by monitoring the levels of gamma radiation emitted after the collision of an accelerated neutron with a heavy target.
+Through this, we hope to be able to explain the Baryon Asymmetry of the early universe.
+</br>
+</br>
+This readout software was developed in C++ using the ROOT framework and communicated in real time with custom firmware on a CAEN DT5560SE digitizer, processing and outputting its data.
+It was successfully tested on a J-PARC particle accelerator.
+</p>
+						</div>
+
+<div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
+          <a href="NOPTREXPoster.pdf" target="_blank" download><button>Download Poster</button></a>
+        </div>
+
+					</div>
+				</li>
+
+				<li>
+					<div class="project">
+						<img src="ErosionSim.png" alt="Project 1">
+						<div class="project-description">
+							<h2>Hydraulic Erosion Simulator</h2>
+							<p>
+This project allows the user to load in terrain measurements or procedurally generate random terrain, then use a hydraulic erosion algorithm on that terrain. This can either be used to automate the creation of realistic random terrain or simulate actual erosion on measured terrain.
+</br>
+</br>
+Built for University of Kentucky's Honors Algorithm and Design Final Project, Spring 2022.
+</br>
+</br>
+Press H to hide all UI elements and G to hide all tips.
+</p>
+						</div>
+
+<div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
+          <a href="HydraulicErosion.zip" target="_blank" download><button>Download</button></a>
+          <a href="https://github.com/AaronMoseley/HydraulicErosion" target="_blank"><button>Github</button></a>
+        </div>
+
+					</div>
+				</li>
+				<li>
+					<div class="project">
+						<img src="PhantomMansion.png" alt="Project 2">
+						<div class="project-description">
+							<h2>Phantom Mansion - MLH Hackathon 1st Place Winner</h2>
+							<p>
+A haunted house roguelike where your goal is to find treasure at the top of the house. Multiple difficulty levels are available and high scores are saved. All levels are randomly generated using graph traversal algorithms.
+</br>
+</br>
+Won first place at Cathacks VIII Hackathon. Presented at University of Kentucky E-Day 2023.
+</br>
+</br>
+To input a control, type it into the console and press "Enter." Look at the help menu to view the rest of the controls.
+</p>
+						</div>
+
+						<div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
+          <a href="PhantomMansion.zip" target="_blank" download><button>Download</button></a>
+          <a href="https://github.com/AaronMoseley/CatHacks8" target="_blank"><button>Github</button></a>
+        </div>
+					</div>
+				</li>
+				<li>
+					<div class="project">
+						<img src="Platformer.png" alt="Project 3">
+						<div class="project-description">
+							<h2>Platformer</h2>
+							<p>
+This is a fully-featured platformer game that implements multiple novel mechanics, including advanced movement and a grappling hook.
+</br>
+</br>
+Each level has a different style and includes varied gameplay. Multiple enemy types and a boss fight are included.
+</p>
+						</div>
+
+<div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
+          <a href="Platformer.zip" target="_blank" download><button>Download</button></a>
+          <a href="https://github.com/AaronMoseley/Platformer" target="_blank"><button>Github</button></a>
+        </div>
+
+					</div>
+				</li>
+
+				<li>
+					<div class="project">
+						<img src="MLCalculator.png" alt="Project 3">
+						<div class="project-description">
+							<h2>Machine Learning Calculator</h2>
+							<p>
+This is a handwriting-recognizing calculator I created. You're able to draw on a canvas and a machine learning algorithm will try to determine what number you've drawn by the pixels filled in on the canvas. You're also able to change some of the settings and retrain the algorithm if you want to change how it works.
+</br>
+</br>
+This uses the MNIST handwritten digit database. Press escape to close the program and backspace to remove the last registered number.
+</p>
+						</div>
+
+<div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
+          <a href="MLCalculator.zip" target="_blank" download><button>Download</button></a>
+        </div>
+
+					</div>
+				</li>
+
+<li>
+					<div class="project">
+						<img src="FileTransfer.png" alt="Project 3">
+						<div class="project-description">
+							<h2>File Transfer Protocol</h2>
+							<p>
+This is a set of 3 client-server file transfer protocols. They are all built on the same base, with slight differences in how the different machines communicate.
+This also contains some text files to test the protocols.
+</br>
+</br>
+Users can request and download files contained on the server or the other client. Clients never communicate directly with each other, only indirectly through the server which can make requests on behalf of the clients.
+</p>
+						</div>
+
+<div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
+          <a href="FileTransferProtocol.zip" target="_blank" download><button>Download</button></a>
+	    <a href="https://github.com/AaronMoseley/FileTransferProtocol" target="_blank"><button>Github</button></a>
+        </div>
+
+					</div>
+				</li>
+
+				<li>
+					<div class="project">
+						<img src="PixelPhysics.png" alt="Project 3">
+						<div class="project-description">
+							<h2>Pixel Physics</h2>
+							<p>
+This is a small game/proof of concept that physically simulates 1,500 pixels across 5 types of materials. Each of the materials acts differently than one another which allows the user to create a large number of unique scenarios. Press the left mouse button to place material and the right mouse button to remove it. Press R to reset the canvas and escape to close the program.
+</br>
+</br>
+Controls:
+</br>
+1- Sand
+</br>
+2- Wood
+</br>
+3- Water
+</br>
+4- Fire
+</br>
+5- Stone
+</p>
+						</div>
+
+<div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
+          <a href="PixelPhysics.zip" target="_blank" download><button>Download</button></a>
+        </div>
+
+					</div>
+				</li>
+
+<li>
+					<div class="project">
+						<img src="RopePhysics.png" alt="Project 3">
+						<div class="project-description">
+							<h2>Rope Physics</h2>
+							<p>
+This is a rope simulation game where your goal is to keep the white ball inside the bounds of the screen. You can do this by changing the start and end points of the rope and using it to push the ball in certain directions. The rope will react to the ball and move realistically without a Unity collider or hinge component. Press the left mouse button to change the position of the blue end of the rope and press the right mouse button to change the red end of the rope. Press R to reset the game and escape to close the program.
+</p>
+						</div>
+
+<div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
+          <a href="RopePhysics.zip" target="_blank" download><button>Download</button></a>
+        </div>
+
+					</div>
+				</li>
+			</ul>
+		</section>
+<section id="job-experience">
+  <h2>Job Experience</h2>
+  <div class="timeline">
+    <div class="job-experience-item">
+      <div class="job-experience-date">May 2023 - August 2023 (Anticipated)</div>
+      <div class="job-experience-content">
+        <h3 class="job-experience-title">CAD Software Engineer</h3>
+        <div class="job-experience-company">Infineon</div>
+        <ul class="job-experience-description">
+        </ul>
+      </div>
+    </div>
+
+    <div class="job-experience-item">
+      <div class="job-experience-date">January 2023 - Present</div>
+      <div class="job-experience-content">
+        <h3 class="job-experience-title">Machine Learning Undergraduate Research Assistant</h3>
+        <div class="job-experience-company">University of Kentucky</div>
+        <ul class="job-experience-description">
+        </ul>
+      </div>
+    </div>
+
+    <div class="job-experience-item">
+      <div class="job-experience-date">August 2022 - Present</div>
+      <div class="job-experience-content">
+        <h3 class="job-experience-title">Nuclear Physics Research Assistant</h3>
+        <div class="job-experience-company">University of Kentucky</div>
+        <ul class="job-experience-description">
+        </ul>
+      </div>
+    </div>
+
+    <div class="job-experience-item">
+      <div class="job-experience-date">August 2022 - Present</div>
+      <div class="job-experience-content">
+        <h3 class="job-experience-title">CS216 Lab Assistant</h3>
+        <div class="job-experience-company">University of Kentucky</div>
+        <ul class="job-experience-description">
+        </ul>
+      </div>
+    </div>
+
+    <div class="job-experience-item">
+      <div class="job-experience-date">May 2022 - August 2022</div>
+      <div class="job-experience-content">
+        <h3 class="job-experience-title">Engineering and Technology Intern</h3>
+        <div class="job-experience-company">Lockheed Martin</div>
+        <ul class="job-experience-description">
+        </ul>
+      </div>
+    </div>
+
+    <div class="job-experience-item">
+      <div class="job-experience-date">January 2022 - May 2022</div>
+      <div class="job-experience-content">
+        <h3 class="job-experience-title">CS215 Lab Assistant</h3>
+        <div class="job-experience-company">University of Kentucky</div>
+        <ul class="job-experience-description">
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</main>
+<footer>
+		<p>&copy; 2023 Aaron Moseley</p>
+	</footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+const navbar = document.querySelector('#navbar');
+const position = 100;
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > position) {
+    navbar.classList.add('navbar-small');
+  } else {
+    navbar.classList.remove('navbar-small');
+  }
+});
+
+/**
+ * Constants
+ */
+const TWO_PI = Math.PI * 2;
+
+/**
+ * Application Class
+ */
+class Application {
+    /**
+     * Application constructor
+     */
+    constructor() {
+        this.canvas = document.getElementById("canvas");
+        this.context = this.canvas.getContext("2d");
+        this.width = this.canvas.width = window.innerWidth;
+        this.height = this.canvas.height = window.innerHeight;
+        this.center = {
+            x: this.width / 2,
+            y: this.height / 2
+        };
+
+        this.circleContainers = [];
+
+        //Resize listener for the canvas to fill browser window dynamically
+        window.addEventListener('resize', () => this.resizeCanvas(), false);
+    }
+
+    /**
+     * Simple resize function. Reinitializes everything on the canvas while changing the width/height
+     */
+    resizeCanvas() {
+        this.width = this.canvas.width = window.innerWidth;
+        this.height = this.canvas.height = window.innerHeight;
+        this.center = {
+            x: this.width / 2,
+            y: this.height / 2
+        };
+
+        //Empty the previous container and fill it again with new CircleContainer objects
+        this.circleContainers = [];
+        this.initializeCircleContainers();
+    }
+
+    /**
+     * Create a number of CircleContainer objects based on the numberOfContainers variable
+     * @return void
+     */
+    initializeCircleContainers() {
+        for (let x = 0; x < this.width + 100; x += 100) {
+            for (let y = 0; y < this.height + 100; y += 100) {
+                //Initialize a new instance of the CircleContainer class
+                let circleContainer = new CircleContainer(this.context, x, y);
+
+                //Let the CircleContainer initialize it's children
+                circleContainer.initializeCircles();
+
+                //Add the container to our array of CircleContainer objects
+                this.circleContainers.push(circleContainer);
+            }
+        }
+    }
+
+    /**
+     * Updates the application and every child of the application
+     * @return void
+     */
+    update() {
+        for (let i = 0; i < this.circleContainers.length; i++) {
+            this.circleContainers[i].update();
+        }
+    }
+
+    /**
+     * Renders the application and every child of the application
+     * @return void
+     */
+    render() {
+        //Clear the entire canvas every render
+        this.context.clearRect(0, 0, this.width, this.height);
+
+        //Trigger the render function on every child element
+        for (let i = 0; i < this.circleContainers.length; i++) {
+            this.circleContainers[i].render();
+        }
+    }
+
+    /**
+     * Update and render the application at least 60 times a second
+     * @return void
+     */
+    loop() {
+        this.update();
+        this.render();
+
+        window.requestAnimationFrame(() => this.loop());
+
+	  const canvas = document.querySelector('#canvas');
+const context = canvas.getContext('2d');
+
+// Set font properties
+context.font = 'bold 50px Arial';
+context.fillStyle = 'black';
+context.textAlign = 'center';
+context.textBaseline = 'middle';
+
+// Get the center coordinates of the canvas
+const centerX = canvas.width / 2;
+const centerY = canvas.height / 2;
+
+// Draw the text in the center of the canvas
+context.fillText('Hi, I\'m Aaron Moseley', centerX, centerY);
+
+    }
+}
+
+/**
+ * CircleContainer Class
+ */
+class CircleContainer {
+    /**
+     * CircleContainer constructor
+     * @param context - The context from the canvas object of the Application
+     * @param x
+     * @param y
+     */
+    constructor(context, x, y) {
+        this.context = context;
+        this.position = {x, y};
+
+        this.numberOfCircles = 19;
+        this.circles = [];
+
+        this.baseRadius = 20;
+        this.bounceRadius = 200;
+        this.singleSlice = TWO_PI / this.numberOfCircles;
+    }
+
+    /**
+     * Create a number of Circle objects based on the numberOfCircles variable
+     * @return void
+     */
+    initializeCircles() {
+        for (let i = 0; i < this.numberOfCircles; i++) {
+            this.circles.push(new Circle(this.position.x, this.position.y + Math.random(), this.baseRadius, this.bounceRadius, i * this.singleSlice));
+        }
+    }
+
+    /**
+     * Try to update the application at least 60 times a second
+     * @return void
+     */
+    update() {
+        for (let i = 0; i < this.numberOfCircles; i++) {
+            this.circles[i].update(this.context);
+        }
+    }
+
+    /**
+     * Try to render the application at least 60 times a second
+     * @return void
+     */
+    render() {
+        for (let i = 0; i < this.numberOfCircles; i++) {
+            this.circles[i].render(this.context);
+        }
+    }
+}
+
+/**
+ * Circle Class
+ */
+class Circle {
+    /**
+     * Circle constructor
+     * @param x - The horizontal position of this circle
+     * @param y - The vertical position of this circle
+     * @param baseRadius
+     * @param bounceRadius
+     * @param angleCircle
+     */
+    constructor(x, y, baseRadius, bounceRadius, angleCircle) {
+        this.basePosition = {x, y};
+        this.position = {x, y};
+        this.speed = 0.0025;
+        this.baseSize = 20;
+        this.size = 10;
+        this.angle = (x + y);
+        this.baseRadius = baseRadius;
+        this.bounceRadius = bounceRadius;
+        this.angleCircle = angleCircle;
+    }
+
+    /**
+     * Update the position of this object
+     * @return void
+     */
+    update() {
+
+	  var cutoffY = 900;
+	  var maxSize = 40;
+
+	  this.position.x = this.basePosition.x + Math.cos(this.angleCircle) * (Math.sin(this.angle + this.angleCircle) * this.bounceRadius + this.baseRadius);
+        this.position.y = this.basePosition.y + Math.sin(this.angleCircle) * (Math.sin(this.angle + this.angleCircle) * this.bounceRadius + this.baseRadius);
+        this.size = (Math.cos(this.angle) * 8) + this.baseSize;
+
+	  this.size = (1 - Math.max(0, Math.min(this.position.y, cutoffY) / cutoffY)) * this.size;
+
+        this.angle += this.speed;
+    }
+
+    /**
+     * Renders this Circle object on the canvas
+     * @param context - The context from the canvas object of the Application
+     * @return void
+     */
+    render(context) {
+        context.fillStyle = "hsl(0, 0%, "+((this.size * 2) + 60)+"%)";
+        context.beginPath();
+        context.arc(this.position.x, this.position.y, this.size, 0, TWO_PI);
+        context.fill();
+    }
+}
+
+/**
+ * Onload function is executed whenever the page is done loading, initializes the application
+ */
+window.onload = function () {
+    //Create a new instance of the application
+    const application = new Application();
+
+    //Initialize the CircleContainer objects
+    application.initializeCircleContainers();
+
+    //Start the initial loop function for the first time
+    application.loop();
+};
+</script>
+
+</body>
+</html>
