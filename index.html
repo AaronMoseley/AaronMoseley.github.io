@@ -462,8 +462,11 @@ class Application {
      * @return void
      */
     loop() {
-        this.update();
-        this.render();
+        if(screen.width > 600)
+        {
+          this.update();
+          this.render();
+        }
 
         window.requestAnimationFrame(() => this.loop());
     }
@@ -537,7 +540,7 @@ class Circle {
     constructor(x, y, baseRadius, bounceRadius, angleCircle) {
         this.basePosition = {x, y};
         this.position = {x, y};
-        this.speed = 0.0025;
+        this.speed = 0.001;
         this.baseSize = 20;
         this.size = 10;
         this.angle = (x + y);
@@ -552,7 +555,7 @@ class Circle {
      */
     update() {
 
-      var height = 1 * screen.height * (screen.height / screen.width);
+      var height = 0.9 * screen.height;
 
 	  var cutoffY = height;
 	  var maxSize = 40;
@@ -582,6 +585,7 @@ class Circle {
 /**
  * Onload function is executed whenever the page is done loading, initializes the application
  */
+
 window.onload = function () {
     //Create a new instance of the application
     const application = new Application();
