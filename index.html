@@ -561,8 +561,6 @@ class Circle {
         this.position.y = this.basePosition.y + Math.sin(this.angleCircle) * (Math.sin(this.angle + this.angleCircle) * this.bounceRadius + this.baseRadius);
         this.size = (Math.cos(this.angle) * 8) + this.baseSize;
 
-      console.log(this.position.y);
-
 	  this.size = (1 - Math.max(0, Math.min(this.position.y, cutoffY) / cutoffY)) * this.size;
 
         this.angle += this.speed;
