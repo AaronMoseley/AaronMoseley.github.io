@@ -14,7 +14,7 @@ background: linear-gradient(180deg, rgba(60,60,60,1) 0%, #f2f2f2 100%);
 }
 
 #canvas{
-  margin:0 auto;
+  margin:0;
   display:block;
   filter:url('#shadowed-goo');
   background-color: #f2f2f2;
@@ -253,6 +253,14 @@ svg{
   display:none;
 }
 
+.project button {
+  white-space: nowrap;
+}
+
+button {
+  height: 100%;
+}
+
 * {
   scroll-padding: 50px;
 }
@@ -260,8 +268,8 @@ svg{
 .personalpic {
   border-radius: 50%;
   float: left;
-  height: 27%;
-  width: 27%;
+  height: 30%;
+  width: 30%;
   margin-right: 2%;
 }
 
