@@ -8,7 +8,7 @@
 <body>
   <h1 style="position: absolute; height: 100%; width: 100%; text-align: center; top: 40%; z-index: 1000; font-size: 50px;">Hi, I'm Aaron Moseley</h1>
 
-  <div id="grad"></div>
+  <div id="grad" style="box-shadow: none;"></div>
 
 	<canvas id="canvas" style="z-index: 999;"></canvas>
 
@@ -20,8 +20,8 @@
           <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
           <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
           <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
-          <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
-          <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+          <!--<feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />-->
+          <!--<feOffset in="shadow" dx="1" dy="1" result="shadow" />-->
           <feBlend in2="shadow" in="goo" result="goo" />
           <feBlend in2="goo" in="SourceGraphic" result="mix" />
       </filter>
@@ -55,15 +55,15 @@
       <div class="col-md-6">
         <h2>About Me</h2>
         <p>
-I'm a junior in the Lewis Honors College at the University of Kentucky double-majoring in Computer Science and Mathematics, planning to graduate in May 2024. I'm currently working as a Lab Assistant for CS216 (Introduction to Software Engineering) and as a Research Assistant to Dr. Abdullah-Al-Zubaer Imran where I'm working on medical image segmentation research using machine learning. I'll be working as a CAD Software Engineering Intern at Infineon during the Summer of 2023.
+I'm a junior in the Lewis Honors College at the University of Kentucky double-majoring in Computer Science and Mathematics, planning to graduate in May 2024. I'm currently a Lab Assistant for CS216 (Introduction to Software Engineering) and a Research Assistant to Dr. Abdullah-Al-Zubaer Imran where I'm working on medical image segmentation research using machine learning. This summer, I'll be a CAD Software Engineering Intern at Infineon.
 
 </br>
 </br>
 
-I'm primarily interested in artificial intelligence and machine learning but I have a wide variety of experience.
+I'm primarily interested in artificial intelligence and machine learning but I have a wide variety of experience, including creating data acquisition systems, game development, web development, and computer networking.
 </p>
         <div class="buttons">
-          <a href="AaronMoseleyResume.pdf" target="_blank" download><button>Resume</button></a>
+          <a href="AaronMoseleyResume.pdf" target="_blank" download><button>&#11123; Resume</button></a>
 	    <a href="https://github.com/AaronMoseley" target="_blank"><button>Github</button></a>
           <a href="https://www.linkedin.com/in/aaron-moseley/" target="_blank"><button>LinkedIn</button></a>
         </div>
@@ -116,13 +116,13 @@ The experiment is investigating time-reversal violations in low-energy neutron r
 Through this, we hope to be able to explain the Baryon Asymmetry of the early universe.
 </br>
 </br>
-This readout software was developed in C++ using the ROOT framework and communicated in real time with custom firmware on a CAEN DT5560SE digitizer, processing and outputting its data.
+This readout software was developed in C++ using the ROOT framework. It communicates in real time with custom firmware on a CAEN DT5560SE digitizer: processing, formatting, and outputting its data.
 It was successfully tested on a J-PARC particle accelerator.
 </p>
 						</div>
 
 <div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
-          <a href="NOPTREXPoster.pdf" target="_blank" download><button>Download Poster</button></a>
+          <a href="NOPTREXPoster.pdf" target="_blank" download><button>&#11123; Download Poster</button></a>
         </div>
 
 					</div>
@@ -134,18 +134,22 @@ It was successfully tested on a J-PARC particle accelerator.
 						<div class="project-description">
 							<h2>Hydraulic Erosion Simulator</h2>
 							<p>
-This project allows the user to load in terrain measurements or procedurally generate random terrain, then use a hydraulic erosion algorithm on that terrain. This can either be used to automate the creation of realistic random terrain or simulate actual erosion on measured terrain.
+Realistically simulates hydraulic erosion on user-defined or procedurally generated terrain. Allows the user to customize both the initial terrain and the erosion process to create unique features.
+              </br>
+            </br>
+Uses Perlin Noise algorithm to randomly generate initial terrain.
+Visualizes gradual erosion in real-time and creates report detailing its effects on the terrain.
 </br>
 </br>
-Built for University of Kentucky's Honors Algorithm and Design Final Project, Spring 2022.
+Press H to hide all UI elements, press G to hide all tips.
 </br>
 </br>
-Press H to hide all UI elements and G to hide all tips.
+Developed in Unity using C#.
 </p>
 						</div>
 
 <div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
-          <a href="HydraulicErosion.zip" target="_blank" download><button>Download</button></a>
+          <a href="HydraulicErosion.zip" target="_blank" download><button>&#11123; Download</button></a>
           <a href="https://github.com/AaronMoseley/HydraulicErosion" target="_blank"><button>Github</button></a>
         </div>
 
@@ -157,18 +161,20 @@ Press H to hide all UI elements and G to hide all tips.
 						<div class="project-description">
 							<h2>Phantom Mansion - MLH Hackathon 1st Place Winner</h2>
 							<p>
-A haunted house roguelike where your goal is to find treasure at the top of the house. Multiple difficulty levels are available and high scores are saved. All levels are randomly generated using graph traversal algorithms.
+Won 1st place at CatHacks VIII Hackathon. Presented at the University of Kentucky's E-Day 2023.
 </br>
 </br>
-Won first place at Cathacks VIII Hackathon. Presented at University of Kentucky E-Day 2023.
+A haunted house roguelike game with the goal of finding treasure at the top of a ghost-infested house.
+Multiple difficulty levels are available and high scores are saved for each player.
+All levels are randomly generated using randomized depth-first search and ghost AI is implemented using breadth-first-search.
 </br>
 </br>
-To input a control, type it into the console and press "Enter." Look at the help menu to view the rest of the controls.
+Developed in C#.
 </p>
 						</div>
 
 						<div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
-          <a href="PhantomMansion.zip" target="_blank" download><button>Download</button></a>
+          <a href="PhantomMansion.zip" target="_blank" download><button>&#11123; Download</button></a>
           <a href="https://github.com/AaronMoseley/CatHacks8" target="_blank"><button>Github</button></a>
         </div>
 					</div>
@@ -179,15 +185,21 @@ To input a control, type it into the console and press "Enter." Look at the help
 						<div class="project-description">
 							<h2>Platformer</h2>
 							<p>
-This is a fully-featured platformer game that implements multiple novel mechanics, including advanced movement and a grappling hook.
+A fully-featured 2D platformer with multiple novel game mechanics, including advanced player movement, a grappling hook, and challenging puzzles.
+Implements and standardizes quality-of-life features such as save states and user-modifiable controls in Unity.
+Includes multiple levels, varied enemies, and a boss fight.
 </br>
 </br>
-Each level has a different style and includes varied gameplay. Multiple enemy types and a boss fight are included.
+The tech demo incorporates more gameplay mechanics including advanced enemy AI using A* pathfinding, an inventory system, a health system, and NPCs with dialogue.
+</br>
+</br>
+Developed in Unity using C#.
 </p>
 						</div>
 
 <div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
-          <a href="Platformer.zip" target="_blank" download><button>Download</button></a>
+          <a href="Platformer.zip" target="_blank" download><button>&#11123; Full Game</button></a>
+          <a href="PlatformerTechDemp.zip" target="_blank" download><button>&#11123; Tech Demo</button></a>
           <a href="https://github.com/AaronMoseley/Platformer" target="_blank"><button>Github</button></a>
         </div>
 
@@ -200,15 +212,20 @@ Each level has a different style and includes varied gameplay. Multiple enemy ty
 						<div class="project-description">
 							<h2>Machine Learning Calculator</h2>
 							<p>
-This is a handwriting-recognizing calculator I created. You're able to draw on a canvas and a machine learning algorithm will try to determine what number you've drawn by the pixels filled in on the canvas. You're also able to change some of the settings and retrain the algorithm if you want to change how it works.
+A handwriting-recognizing calculator trained on the MNIST handwritten numbers dataset.
+Uses a linear image classification model manually implemented in C#.
+Allows user to draw on canvas to enter numbers and retrain the model using custom hyperparameters.
 </br>
 </br>
-This uses the MNIST handwritten digit database. Press escape to close the program and backspace to remove the last registered number.
+Press escape to close the program and backspace to delete the last written character.
+</br>
+</br>
+Developed in Unity using C#.
 </p>
 						</div>
 
 <div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
-          <a href="MLCalculator.zip" target="_blank" download><button>Download</button></a>
+          <a href="MLCalculator.zip" target="_blank" download><button>&#11123; Download</button></a>
         </div>
 
 					</div>
@@ -220,16 +237,17 @@ This uses the MNIST handwritten digit database. Press escape to close the progra
 						<div class="project-description">
 							<h2>File Transfer Protocol</h2>
 							<p>
-This is a set of 3 client-server file transfer protocols. They are all built on the same base, with slight differences in how the different machines communicate.
-This also contains some text files to test the protocols.
+A set of 3 client-server file transfer protocols. Each protocol allows two users to request files from each other or from a central server.
+By communicating with the server that can make requests on behalf of clients, users can send and receive files of any type to and from each other.
+Users are able to request multiple files of varying types in a single command, even if some files are on different machines.
 </br>
 </br>
-Users can request and download files contained on the server or the other client. Clients never communicate directly with each other, only indirectly through the server which can make requests on behalf of the clients.
+Each protocol was developed in Python.
 </p>
 						</div>
 
 <div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
-          <a href="FileTransferProtocol.zip" target="_blank" download><button>Download</button></a>
+          <a href="FileTransferProtocol.zip" target="_blank" download><button>&#11123; Download</button></a>
 	    <a href="https://github.com/AaronMoseley/FileTransferProtocol" target="_blank"><button>Github</button></a>
         </div>
 
@@ -242,25 +260,19 @@ Users can request and download files contained on the server or the other client
 						<div class="project-description">
 							<h2>Pixel Physics</h2>
 							<p>
-This is a small game/proof of concept that physically simulates 1,500 pixels across 5 types of materials. Each of the materials acts differently than one another which allows the user to create a large number of unique scenarios. Press the left mouse button to place material and the right mouse button to remove it. Press R to reset the canvas and escape to close the program.
+A game that physically simulates 1,500 pixels of different materials on a canvas. 
+Each material behaves uniquely (e.g. fire burning wood or sand displacing water), allowing the user to create a great number of interesting scenarios.
 </br>
 </br>
-Controls:
+Numbers 1-5 switch between different materials. Use the left and right mouse buttons to place and remove material. Press R to reset the canvas and escape to close the program.
 </br>
-1- Sand
 </br>
-2- Wood
-</br>
-3- Water
-</br>
-4- Fire
-</br>
-5- Stone
+Developed in Unity using C#.
 </p>
 						</div>
 
 <div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
-          <a href="PixelPhysics.zip" target="_blank" download><button>Download</button></a>
+          <a href="PixelPhysics.zip" target="_blank" download><button>&#11123; Download</button></a>
         </div>
 
 					</div>
@@ -272,12 +284,20 @@ Controls:
 						<div class="project-description">
 							<h2>Rope Physics</h2>
 							<p>
-This is a rope simulation game where your goal is to keep the white ball inside the bounds of the screen. You can do this by changing the start and end points of the rope and using it to push the ball in certain directions. The rope will react to the ball and move realistically without a Unity collider or hinge component. Press the left mouse button to change the position of the blue end of the rope and press the right mouse button to change the red end of the rope. Press R to reset the game and escape to close the program.
-</p>
+A game based on a realistically simulated rope with the goal of keeping a moving ball inside the screen for as long as possible.
+The rope is drawn using Verlet integration and collisions between it and the ball are manually implemented without a Unity collider or hinge component.
+</br>
+</br>
+Use the left and right mouse buttons to change the location of the blue and red ends of the rope respectively.
+Press R to reset the game and escape to close the program.
+</br>
+</br>
+Developed in Unity using C#.
+              </p>
 						</div>
 
 <div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
-          <a href="RopePhysics.zip" target="_blank" download><button>Download</button></a>
+          <a href="RopePhysics.zip" target="_blank" download><button>&#11123; Download</button></a>
         </div>
 
 					</div>
