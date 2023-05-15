@@ -9,8 +9,8 @@ body {
 background: linear-gradient(180deg, rgba(60,60,60,1) 0%, #f2f2f2 100%);
   height: 100%;
   width: 100%;
+  left: 0;
   position: absolute;
-  top: 0;
 }
 
 @media (min-width: 768px)
@@ -20,6 +20,8 @@ background: linear-gradient(180deg, rgba(60,60,60,1) 0%, #f2f2f2 100%);
   display:block;
   filter:url('#shadowed-goo');
   background-color: #f2f2f2;
+  width: 100%;
+  height: 100%;
 }
 }
 
@@ -36,6 +38,9 @@ header h1 {
 }
 main {
 	padding: 20px;
+  top: 100%;
+  position: absolute;
+  padding-bottom: 5%;
 }
 section h2 {
 	color: #333;
@@ -83,6 +88,11 @@ footer {
 	color: #fff;
 	padding: 20px;
 	text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0px;
+  height: 15px;
 }
 footer p {
 	margin: 0;

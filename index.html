@@ -375,10 +375,11 @@
                </tr>
             </table>
          </section>
+
+         <footer>
+            <p>&copy; 2023 Aaron Moseley</p>
+         </footer>
       </main>
-      <footer>
-         <p>&copy; 2023 Aaron Moseley</p>
-      </footer>
       <script>
          if(screen.width > 767)
           {
@@ -393,7 +394,7 @@
              application.loop();
          };
           } else {
-           document.getElementById("canvas").style = "display: none;";
+           document.getElementById("canvas").style = "background-color: transparent;";
           }
          
          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
