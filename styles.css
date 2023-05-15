@@ -347,3 +347,9 @@ button {
   font-weight: bolder;
   color: black;
 }
+
+@media (max-width: 767px) {
+  #canvas {
+    display: none;
+  }
+}
