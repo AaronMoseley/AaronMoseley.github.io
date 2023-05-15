@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta charset="UTF-8">
 	<title>Aaron Moseley - Portfolio</title>
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <div id="grad" style="box-shadow: none;"></div>
+  <div id="grad" style="box-shadow: none; color: transparent;"></div>
 
 	<canvas id="canvas"></canvas>
   <h1 style="position: absolute; width: 100%; text-align: center; top: 40%; font-size: 50px;">Hi, I'm Aaron Moseley</h1>
@@ -121,9 +121,15 @@ Because this model is able to more accurately calculate the semantic similarity 
 </br>
 
 This uses the <a href="https://paperswithcode.com/dataset/sick">SICK</a> (Sentences Involving Compositional Knowledge) dataset and expands upon work done in <a href="https://arxiv.org/abs/2205.02047">Hyperbolic Relevance Matching
-  for Neural Keyphrase Extraction
-</a>.
+  for Neural Keyphrase Extraction</a>.
+
+</br>
+</br>
+
+Developed in Python using PyTorch.
+
 </p>
+
 						</div>
 
 <div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
@@ -156,8 +162,8 @@ The experiment is investigating time-reversal violations in low-energy neutron r
 Through this, we hope to be able to explain the Baryon Asymmetry of the early universe.
 </br>
 </br>
-This readout software was developed in C++ using the ROOT framework. It communicates in real time with custom firmware on a CAEN DT5560SE digitizer: processing, formatting, and outputting its data.
-It was successfully tested on a J-PARC particle accelerator.
+This readout software was developed in C++ using the ROOT framework. It communicates in real time with custom firmware on a CAEN DT5560SE digitizer.
+It has already been successfully tested on a particle accelerator at the j-PARC (Japan Proton Accelerator Research Complex) campus and will be used in an experiment at the Los Alamos National Lab later this year.
 </p>
 						</div>
 
@@ -392,7 +398,7 @@ Developed in Unity using C#.
       <td></td>
       <td class="job-experience-date">August 2022 - Present</td>
       <td class="job-experience-content">
-        <h3 class="job-experience-title">CS216 Lab Assistant</h3>
+        <h3 class="job-experience-title">CS216 Teaching Assistant</h3>
         <div class="job-experience-company">University of Kentucky</div>
       </td>
     </tr>
@@ -400,7 +406,7 @@ Developed in Unity using C#.
     <tr>
       <td class="job-experience-content">
         <h3 class="job-experience-title">Engineering and Technology Intern</h3>
-        <div class="job-experience-company">Lockheed Martin</div>
+        <div class="job-experience-company">Lockheed Martin Missiles and Fire Control</div>
       </td>
       <td class="job-experience-date">May 2022 - August 2022</td>
     <td></td>
@@ -410,7 +416,7 @@ Developed in Unity using C#.
       <td></td>
       <td class="job-experience-date">January 2022 - May 2022</td>
       <td class="job-experience-content">
-        <h3 class="job-experience-title">CS215 Lab Assistant</h3>
+        <h3 class="job-experience-title">CS215 Teaching Assistant</h3>
         <div class="job-experience-company">University of Kentucky</div>
       </td>
     </tr>
@@ -424,6 +430,22 @@ Developed in Unity using C#.
 	</footer>
 
 <script>
+if(screen.width > 767)
+ {
+window.onload = function () {
+    //Create a new instance of the application
+    const application = new Application();
+
+    //Initialize the CircleContainer objects
+    application.initializeCircleContainers();
+
+    //Start the initial loop function for the first time
+    application.loop();
+};
+ } else {
+  document.getElementById("canvas").style = "display: none;";
+ }
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -663,20 +685,6 @@ class Circle {
 /**
  * Onload function is executed whenever the page is done loading, initializes the application
  */
-
- if(screen.width > 767)
- {
-window.onload = function () {
-    //Create a new instance of the application
-    const application = new Application();
-
-    //Initialize the CircleContainer objects
-    application.initializeCircleContainers();
-
-    //Start the initial loop function for the first time
-    application.loop();
-};
- }
 </script>
 
 </body>

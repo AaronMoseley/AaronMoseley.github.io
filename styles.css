@@ -13,11 +13,14 @@ background: linear-gradient(180deg, rgba(60,60,60,1) 0%, #f2f2f2 100%);
   top: 0;
 }
 
+@media (min-width: 768px)
+{
 #canvas{
   margin:0;
   display:block;
   filter:url('#shadowed-goo');
   background-color: #f2f2f2;
+}
 }
 
 .header-content {
@@ -189,6 +192,10 @@ footer p {
   #skills li {
     width: calc(50% - 20px);
   }
+
+  #canvas {
+    display: none;
+  }
 }
 
 nav {
@@ -346,10 +353,4 @@ button {
   font-size: 35px;
   font-weight: bolder;
   color: black;
-}
-
-@media (max-width: 767px) {
-  #canvas {
-    display: none;
-  }
 }
