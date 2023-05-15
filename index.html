@@ -1,691 +1,640 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Aaron Moseley - Portfolio</title>
-	<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-  <div id="grad" style="box-shadow: none; color: transparent;"></div>
-
-	<canvas id="canvas"></canvas>
-  <h1 style="position: absolute; width: 100%; text-align: center; top: 40%; font-size: 50px;">Hi, I'm Aaron Moseley</h1>
-
-<!-- SVG Goo filter from: https://css-tricks.com/gooey-effect/ -->
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-    <defs>
-      <filter id="shadowed-goo">
-          
-          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
-          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-          <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
-          <!--<feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />-->
-          <!--<feOffset in="shadow" dx="1" dy="1" result="shadow" />-->
-          <feBlend in2="shadow" in="goo" result="goo" />
-          <feBlend in2="goo" in="SourceGraphic" result="mix" />
-      </filter>
-      <filter id="goo">
-          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
-          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-          <feBlend in2="goo" in="SourceGraphic" result="mix" />
-      </filter>
-    </defs>
-</svg>
-
-	<header>
-		<div>
-			<nav id="navbar" class="navbar nav" style="z-index: 1001;">
-				<ul>
-					<li><a href="#about">About Me</a></li>
-					<li><a href="#skills">Skills</a></li>
-					<li><a href="#projects">Projects</a></li>
-					<li><a href="#job-experience">Experience</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
-	<main>
-		<section id="about">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <img src="AaronPic.jpg" class="personalpic" alt="Aaron Moseley">
-      </div>
-      <div class="col-md-6">
-        <h1 class="section-header">About Me</h1>
-        <p>
-I'm a junior in the Lewis Honors College at the University of Kentucky double-majoring in Computer Science and Mathematics, planning to graduate in May 2024. I'm currently a Lab Assistant for CS216 (Introduction to Software Engineering) and a Research Assistant to Dr. Abdullah-Al-Zubaer Imran where I'm working on medical image segmentation research using machine learning. This summer, I'll be a CAD Software Engineering Intern at Infineon.
-
-</br>
-</br>
-
-I'm primarily interested in artificial intelligence and machine learning but I have a wide variety of experience, including creating data acquisition systems, game development, web development, and computer networking.
-</p>
-        <div class="buttons">
-          <a href="AaronMoseleyResume.pdf" target="_blank" download><button>&#11123; Resume</button></a>
-	    <a href="https://github.com/AaronMoseley" target="_blank"><button>Github</button></a>
-          <a href="https://www.linkedin.com/in/aaron-moseley/" target="_blank"><button>LinkedIn</button></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-			<h2>Contact Information</h2>
-			<ul>
-				<li><b>Email:</b> amoseley018@gmail.com, amoseley018@uky.edu</li>
-				<li><b>Address:</b> Lexington, Kentucky</li>
-			</ul>
-		</section>
-
-<section id="skills">
-  <div class="container">
-    <h1 class="section-header" style="text-align: center;">Skills</h1>
-    <ul>
-      <li>C++ / C</li>
-      <li>C# / .NET</li>
-	<li>Python</li>
-	<li>Java</li>
-	<li>PyTorch</li>
-	<li>Git / Github</li>
-	<li>Unity</li>
-	<li>HTML/CSS</li>
-	<li>Javascript</li>
-	<li>Linux</li>
-    </ul>
-  </div>
-</section>
-
-
-		<section id="projects">
-			<h1 class="section-header">Projects</h1>
-			<ul>
-        <li>
-					<div class="project">
-						<img src="HyperSim.png" alt="Project 1">
-						<div class="project-description">
-							<h2>Hyperbolic Semantic Search</h2>
-							<p>
-A semantic search model leveraging SentenceBERT embeddings and the hyperbolic geometric space to better represent the meaning of sentences.
-
-</br>
-</br>
-
-By combining the knowledge contained in both the Euclidean and hyperbolic representations of sentences, this model (HyperSim) can better estimate the relationship between sentences.
-This results in an improvement by a factor of 2 over the best available baseline model using solely the Euclidean geometric space.
-Because this model is able to more accurately calculate the semantic similarity between two sentences, it can be used to rank documents in a database based on a user-provided query.
-
-</br>
-</br>
-
-This uses the <a href="https://paperswithcode.com/dataset/sick">SICK</a> (Sentences Involving Compositional Knowledge) dataset and expands upon work done in <a href="https://arxiv.org/abs/2205.02047">Hyperbolic Relevance Matching
-  for Neural Keyphrase Extraction</a>.
-
-</br>
-</br>
-
-Developed in Python using PyTorch.
-
-</p>
-
-						</div>
-
-<div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
-        <ul>
-          <li>
-            <a href="HyperbolicSemanticSearch.zip" target="_blank" download><button>&#11123; Download</button></a>
-          </li>
-
-          <li>
-            <a href="https://github.com/AaronMoseley/HyperbolicSemanticSearch" target="_blank" download><button>Github</button></a>
-          </li>
-        </ul>
-        </div>
-
-					</div>
-				</li>
-
-
-<li>
-					<div class="project">
-						<img src="NOPTREX.png" alt="Project 2">
-						<div class="project-description">
-							<h2>NOPTREX Readout Software</h2>
-							<p>
-Presented at NCUR 2023 and APS April Meeting 2023.
-</br>
-</br>
-A multi-channel readout software for the Neutron Optics Parity and Time-Reversal Experiment (NOPTREX). 
-The experiment is investigating time-reversal violations in low-energy neutron reactions by monitoring the levels of gamma radiation emitted after the collision of an accelerated neutron with a heavy target.
-Through this, we hope to be able to explain the Baryon Asymmetry of the early universe.
-</br>
-</br>
-This readout software was developed in C++ using the ROOT framework. It communicates in real time with custom firmware on a CAEN DT5560SE digitizer.
-It has already been successfully tested on a particle accelerator at the j-PARC (Japan Proton Accelerator Research Complex) campus and will be used in an experiment at the Los Alamos National Lab later this year.
-</p>
-						</div>
-
-<div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
-        <ul>
-          <li>
-            <a href="NOPTREXPoster.pdf" target="_blank" download><button>&#11123; Download Poster</button></a>
-          </li>
-        </ul>
-        </div>
-
-					</div>
-				</li>
-
-				<li>
-					<div class="project">
-						<img src="ErosionSim.png" alt="Project 3">
-						<div class="project-description">
-							<h2>Hydraulic Erosion Simulator</h2>
-							<p>
-Realistically simulates hydraulic erosion on user-defined or procedurally generated terrain. Allows the user to customize both the initial terrain and the erosion process to create unique features.
-              </br>
-            </br>
-Uses Perlin Noise algorithm to randomly generate initial terrain.
-Visualizes gradual erosion in real-time and creates report detailing its effects on the terrain.
-</br>
-</br>
-Press H to hide all UI elements, press G to hide all tips.
-</br>
-</br>
-Developed in Unity using C#.
-</p>
-						</div>
-
-<div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
-          <ul>
-            <li>
-          <a href="HydraulicErosion.zip" target="_blank" download><button>&#11123; Download</button></a>
-          </li>
-          <li>
-          <a href="https://github.com/AaronMoseley/HydraulicErosion" target="_blank"><button>Github</button></a>
-          </li>
-          </ul>
-        </div>
-
-					</div>
-				</li>
-				<li>
-					<div class="project">
-						<img src="PhantomMansion.png" alt="Project 4">
-						<div class="project-description">
-							<h2>Phantom Mansion - MLH Hackathon 1st Place Winner</h2>
-							<p>
-Won 1st place at CatHacks VIII Hackathon. Presented at the University of Kentucky's E-Day 2023.
-</br>
-</br>
-A haunted house roguelike game with the goal of finding treasure at the top of a ghost-infested house.
-Multiple difficulty levels are available and high scores are saved for each player.
-All levels are randomly generated using randomized depth-first search and ghost AI is implemented using breadth-first-search.
-</br>
-</br>
-Developed in C#.
-</p>
-						</div>
-
-						<div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
-          <ul>
-          <li>
-          <a href="PhantomMansion.zip" target="_blank" download><button>&#11123; Download</button></a>
-          </li>
-          <li>
-          <a href="https://github.com/AaronMoseley/CatHacks8" target="_blank"><button>Github</button></a>
-          </li>
-          </ul>
-        </div>
-					</div>
-				</li>
-				<li>
-					<div class="project">
-						<img src="Platformer.png" alt="Project 5">
-						<div class="project-description">
-							<h2>Platformer</h2>
-							<p>
-A fully-featured 2D platformer with multiple novel game mechanics, including advanced player movement, a grappling hook, and challenging puzzles.
-Implements and standardizes quality-of-life features such as save states and user-modifiable controls in Unity.
-Includes multiple levels, varied enemies, and a boss fight.
-</br>
-</br>
-The tech demo incorporates more gameplay mechanics including advanced enemy AI using A* pathfinding, an inventory system, a health system, and NPCs with dialogue.
-</br>
-</br>
-Developed in Unity using C#.
-</p>
-						</div>
-
-<div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
-          <ul>
-            <li>
-          <a href="2DPlatformer.zip" target="_blank" download><button>&#11123; Full Game</button></a>
-            </li>
-            <li>
-          <a href="PlatformerTechDemo.zip" target="_blank" download><button>&#11123; Tech Demo</button></a>
-          </li>
-          <li>
-          <a href="https://github.com/AaronMoseley/Platformer" target="_blank"><button>Github</button></a>
-          </li>
-          </ul>
-        </div>
-
-					</div>
-				</li>
-
-				<li>
-					<div class="project">
-						<img src="MLCalculator.png" alt="Project 6">
-						<div class="project-description">
-							<h2>Machine Learning Calculator</h2>
-							<p>
-A handwriting-recognizing calculator trained on the MNIST handwritten numbers dataset.
-Uses a linear image classification model manually implemented in C#.
-Allows user to draw on canvas to enter numbers and retrain the model using custom hyperparameters.
-</br>
-</br>
-Press escape to close the program and backspace to delete the last written character.
-</br>
-</br>
-Developed in Unity using C#.
-</p>
-						</div>
-
-<div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
-          <ul>
-          <li>
-          <a href="MLCalculator.zip" target="_blank" download><button>&#11123; Download</button></a>
-          </li>
-          </ul>
-        </div>
-
-					</div>
-				</li>
-
-<li>
-					<div class="project">
-						<img src="FileTransfer.png" alt="Project 7">
-						<div class="project-description">
-							<h2>File Transfer Protocols</h2>
-							<p>
-A set of 3 client-server file transfer protocols. Each protocol allows two users to request files from each other or from a central server.
-By communicating with the server that can make requests on behalf of clients, users can send and receive files of any type to and from each other.
-Users are able to request multiple files of varying extensions in a single command, even if some files are on different machines.
-</br>
-</br>
-Each protocol was developed in Python.
-</p>
-						</div>
-
-<div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
-          <ul>
-            <li>
-          <a href="FileTransferProtocols.zip" target="_blank" download><button>&#11123; Download</button></a>
-          </li>
-          <li>
-	    <a href="https://github.com/AaronMoseley/FileTransferProtocol" target="_blank"><button>Github</button></a>
-      </li>
-      </ul>
-        </div>
-
-					</div>
-				</li>
-
-				<li>
-					<div class="project">
-						<img src="PixelPhysics.png" alt="Project 8">
-						<div class="project-description">
-							<h2>Pixel Physics</h2>
-							<p>
-A game that physically simulates 1,500 pixels of different materials on a canvas. 
-Each material behaves uniquely (e.g. fire burning wood or sand displacing water), allowing the user to create a great number of interesting scenarios.
-</br>
-</br>
-Numbers 1-5 switch between different materials. Use the left and right mouse buttons to place and remove material. Press R to reset the canvas and escape to close the program.
-</br>
-</br>
-Developed in Unity using C#.
-</p>
-						</div>
-
-<div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
-          <ul>
-            <li>
-          <a href="PixelPhysics.zip" target="_blank" download><button>&#11123; Download</button></a>
-          </li>
-          </ul>
-        </div>
-
-					</div>
-				</li>
-			</ul>
-		</section>
-<section id="job-experience">
-  <h1 class="section-header">Professional Experience</h1>
-  <table class="timeline" style="width: 100%; empty-cells: show; table-layout: fixed;">
-    <tr>
-      <td class="job-experience-content">
-        <h3 class="job-experience-title">CAD Software Engineer Intern</h3>
-        <div class="job-experience-company">Infineon</div>
-      </td>
-      <td class="job-experience-date">May 2023 - August 2023</td>
-    <td></td>
-    </tr>
-
-    <tr>
-      <td></td>
-      <td class="job-experience-date">January 2023 - Present</td>
-
-      <td class="job-experience-content">
-        <h3 class="job-experience-title">Medical Imaging/Machine Learning Research Assistant</h3>
-        <div class="job-experience-company">University of Kentucky</div>
-      </td>
-    </tr>
-
-    <tr>
-      <td class="job-experience-content">
-        <h3 class="job-experience-title">Nuclear Physics Research Assistant</h3>
-        <div class="job-experience-company">University of Kentucky</div>
-      </td>
-      <td class="job-experience-date">August 2022 - Present</td>
-    <td></td>
-    </tr>
-
-    <tr>
-      <td></td>
-      <td class="job-experience-date">August 2022 - Present</td>
-      <td class="job-experience-content">
-        <h3 class="job-experience-title">CS216 Teaching Assistant</h3>
-        <div class="job-experience-company">University of Kentucky</div>
-      </td>
-    </tr>
-
-    <tr>
-      <td class="job-experience-content">
-        <h3 class="job-experience-title">Engineering and Technology Intern</h3>
-        <div class="job-experience-company">Lockheed Martin Missiles and Fire Control</div>
-      </td>
-      <td class="job-experience-date">May 2022 - August 2022</td>
-    <td></td>
-    </tr>
-
-    <tr>
-      <td></td>
-      <td class="job-experience-date">January 2022 - May 2022</td>
-      <td class="job-experience-content">
-        <h3 class="job-experience-title">CS215 Teaching Assistant</h3>
-        <div class="job-experience-company">University of Kentucky</div>
-      </td>
-    </tr>
-  </table>
-</section>
-
-
-</main>
-<footer>
-		<p>&copy; 2023 Aaron Moseley</p>
-	</footer>
-
-<script>
-if(screen.width > 767)
- {
-window.onload = function () {
-    //Create a new instance of the application
-    const application = new Application();
-
-    //Initialize the CircleContainer objects
-    application.initializeCircleContainers();
-
-    //Start the initial loop function for the first time
-    application.loop();
-};
- } else {
-  document.getElementById("canvas").style = "display: none;";
- }
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
-const navbar = document.querySelector('#navbar');
-const position = 100;
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > position) {
-    navbar.classList.add('navbar-small');
-  } else {
-    navbar.classList.remove('navbar-small');
-  }
-});
-
-/**
- * Constants
- */
-const TWO_PI = Math.PI * 2;
-
-/**
- * Application Class
- */
-class Application {
-    /**
-     * Application constructor
-     */
-    constructor() {
-        this.canvas = document.getElementById("canvas");
-        this.context = this.canvas.getContext("2d");
-        this.width = this.canvas.width = window.innerWidth;
-        this.height = this.canvas.height = window.innerHeight;
-        this.center = {
-            x: this.width / 2,
-            y: this.height / 2
-        };
-
-        this.circleContainers = [];
-
-        //Resize listener for the canvas to fill browser window dynamically
-        window.addEventListener('resize', () => this.resizeCanvas(), false);
-    }
-
-    /**
-     * Simple resize function. Reinitializes everything on the canvas while changing the width/height
-     */
-    resizeCanvas() {
-        this.width = this.canvas.width = window.innerWidth;
-        this.height = this.canvas.height = window.innerHeight;
-        this.center = {
-            x: this.width / 2,
-            y: this.height / 2
-        };
-
-        //Empty the previous container and fill it again with new CircleContainer objects
-        this.circleContainers = [];
-        this.initializeCircleContainers();
-    }
-
-    /**
-     * Create a number of CircleContainer objects based on the numberOfContainers variable
-     * @return void
-     */
-    initializeCircleContainers() {
-        for (let x = 0; x < this.width + 100; x += 100) {
-            for (let y = 0; y < this.height + 100; y += 100) {
-                //Initialize a new instance of the CircleContainer class
-                let circleContainer = new CircleContainer(this.context, x, y);
-
-                //Let the CircleContainer initialize it's children
-                circleContainer.initializeCircles();
-
-                //Add the container to our array of CircleContainer objects
-                this.circleContainers.push(circleContainer);
-            }
-        }
-    }
-
-    /**
-     * Updates the application and every child of the application
-     * @return void
-     */
-    update() {
-        for (let i = 0; i < this.circleContainers.length; i++) {
-            this.circleContainers[i].update();
-        }
-    }
-
-    /**
-     * Renders the application and every child of the application
-     * @return void
-     */
-    render() {
-        //Clear the entire canvas every render
-        this.context.clearRect(0, 0, this.width, this.height);
-
-        //Trigger the render function on every child element
-        for (let i = 0; i < this.circleContainers.length; i++) {
-            this.circleContainers[i].render();
-        }
-    }
-
-    /**
-     * Update and render the application at least 60 times a second
-     * @return void
-     */
-    loop() {
-        if(screen.width > 767)
-        {
-          this.update();
-          this.render();
-          document.querySelector("#canvas").style.backgroundColor = "#f2f2f2";
-        } else {
-          document.querySelector("#canvas").style.backgroundColor = "transparent";
-        }
-
-        window.requestAnimationFrame(() => this.loop());
-    }
-}
-
-/**
- * CircleContainer Class
- */
-class CircleContainer {
-    /**
-     * CircleContainer constructor
-     * @param context - The context from the canvas object of the Application
-     * @param x
-     * @param y
-     */
-    constructor(context, x, y) {
-        this.context = context;
-        this.position = {x, y};
-
-        this.numberOfCircles = 12;
-        this.circles = [];
-
-        this.baseRadius = 20;
-        this.bounceRadius = 200;
-        this.singleSlice = TWO_PI / this.numberOfCircles;
-    }
-
-    /**
-     * Create a number of Circle objects based on the numberOfCircles variable
-     * @return void
-     */
-    initializeCircles() {
-        for (let i = 0; i < this.numberOfCircles; i++) {
-            this.circles.push(new Circle(this.position.x, this.position.y + Math.random(), this.baseRadius, this.bounceRadius, i * this.singleSlice));
-        }
-    }
-
-    /**
-     * Try to update the application at least 60 times a second
-     * @return void
-     */
-    update() {
-        for (let i = 0; i < this.numberOfCircles; i++) {
-            this.circles[i].update(this.context);
-        }
-    }
-
-    /**
-     * Try to render the application at least 60 times a second
-     * @return void
-     */
-    render() {
-        for (let i = 0; i < this.numberOfCircles; i++) {
-            this.circles[i].render(this.context);
-        }
-    }
-}
-
-/**
- * Circle Class
- */
-class Circle {
-    /**
-     * Circle constructor
-     * @param x - The horizontal position of this circle
-     * @param y - The vertical position of this circle
-     * @param baseRadius
-     * @param bounceRadius
-     * @param angleCircle
-     */
-    constructor(x, y, baseRadius, bounceRadius, angleCircle) {
-        this.basePosition = {x, y};
-        this.position = {x, y};
-        this.speed = 0.001;
-        this.baseSize = 20;
-        this.size = 10;
-        this.angle = (x + y);
-        this.baseRadius = baseRadius;
-        this.bounceRadius = bounceRadius;
-        this.angleCircle = angleCircle;
-    }
-
-    /**
-     * Update the position of this object
-     * @return void
-     */
-    update() {
-
-      var height = 0.85 * screen.height;
-
-	  var cutoffY = height;
-	  var maxSize = 40;
-
-	  this.position.x = this.basePosition.x + Math.cos(this.angleCircle) * (Math.sin(this.angle + this.angleCircle) * this.bounceRadius + this.baseRadius);
-        this.position.y = this.basePosition.y + Math.sin(this.angleCircle) * (Math.sin(this.angle + this.angleCircle) * this.bounceRadius + this.baseRadius);
-        this.size = (Math.cos(this.angle) * 8) + this.baseSize;
-
-	  this.size = (1 - Math.max(0, Math.min(this.position.y, cutoffY) / cutoffY)) * this.size;
-
-        this.angle += this.speed;
-    }
-
-    /**
-     * Renders this Circle object on the canvas
-     * @param context - The context from the canvas object of the Application
-     * @return void
-     */
-    render(context) {
-        context.fillStyle = "hsl(0, 0%, "+((this.size * 2) + 60)+"%)";
-        context.beginPath();
-        context.arc(this.position.x, this.position.y, this.size, 0, TWO_PI);
-        context.fill();
-    }
-}
-
-/**
- * Onload function is executed whenever the page is done loading, initializes the application
- */
-</script>
-
-</body>
+   <head>
+      <meta charset="UTF-8">
+      <title>Aaron Moseley - Portfolio</title>
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+      <div id="grad" style="box-shadow: none; color: transparent;"></div>
+      <canvas id="canvas"></canvas>
+      <h1 style="position: absolute; width: 100%; text-align: center; top: 40%; font-size: 50px;">Hi, I'm Aaron Moseley</h1>
+      <!-- SVG Goo filter from: https://css-tricks.com/gooey-effect/ -->
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+         <defs>
+            <filter id="shadowed-goo">
+               <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+               <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+               <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+               <!--<feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />-->
+               <!--<feOffset in="shadow" dx="1" dy="1" result="shadow" />-->
+               <feBlend in2="shadow" in="goo" result="goo" />
+               <feBlend in2="goo" in="SourceGraphic" result="mix" />
+            </filter>
+            <filter id="goo">
+               <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+               <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+               <feBlend in2="goo" in="SourceGraphic" result="mix" />
+            </filter>
+         </defs>
+      </svg>
+      <header>
+         <div>
+            <nav id="navbar" class="navbar nav" style="z-index: 1001;">
+               <ul>
+                  <li><a href="#about">About Me</a></li>
+                  <li><a href="#skills">Skills</a></li>
+                  <li><a href="#projects">Projects</a></li>
+                  <li><a href="#job-experience">Experience</a></li>
+               </ul>
+            </nav>
+         </div>
+      </header>
+      <main>
+         <section id="about">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-6">
+                     <img src="AaronPic.jpg" class="personalpic" alt="Aaron Moseley">
+                  </div>
+                  <div class="col-md-6">
+                     <h1 class="section-header">About Me</h1>
+                     <p>
+                        I'm a junior in the Lewis Honors College at the University of Kentucky double-majoring in Computer Science and Mathematics, planning to graduate in May 2024. I'm currently a Lab Assistant for CS216 (Introduction to Software Engineering) and a Research Assistant to Dr. Abdullah-Al-Zubaer Imran where I'm working on medical image segmentation research using machine learning. This summer, I'll be a CAD Software Engineering Intern at Infineon.
+                        </br>
+                        </br>
+                        I'm primarily interested in artificial intelligence and machine learning but I have a wide variety of experience, including creating data acquisition systems, game development, web development, and computer networking.
+                     </p>
+                     <div class="buttons">
+                        <a href="AaronMoseleyResume.pdf" target="_blank" download><button>&#11123; Resume</button></a>
+                        <a href="https://github.com/AaronMoseley" target="_blank"><button>Github</button></a>
+                        <a href="https://www.linkedin.com/in/aaron-moseley/" target="_blank"><button>LinkedIn</button></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section id="contact">
+            <h2>Contact Information</h2>
+            <ul>
+               <li><b>Email:</b> amoseley018@gmail.com, amoseley018@uky.edu</li>
+               <li><b>Address:</b> Lexington, Kentucky</li>
+            </ul>
+         </section>
+         <section id="skills">
+            <div class="container">
+               <h1 class="section-header" style="text-align: center;">Skills</h1>
+               <ul>
+                  <li>C++ / C</li>
+                  <li>C# / .NET</li>
+                  <li>Python</li>
+                  <li>Java</li>
+                  <li>PyTorch</li>
+                  <li>Git / Github</li>
+                  <li>Unity</li>
+                  <li>HTML/CSS</li>
+                  <li>Javascript</li>
+                  <li>Linux</li>
+               </ul>
+            </div>
+         </section>
+         <section id="projects">
+            <h1 class="section-header">Projects</h1>
+            <ul>
+               <li>
+                  <div class="project">
+                     <img src="HyperSim.png" alt="Project 1">
+                     <div class="project-description">
+                        <h2>Hyperbolic Semantic Search</h2>
+                        <p>
+                           A semantic search model leveraging SentenceBERT embeddings and the hyperbolic geometric space to better represent the meaning of sentences.
+                           </br>
+                           </br>
+                           By combining the knowledge contained in both the Euclidean and hyperbolic representations of sentences, this model (HyperSim) can better estimate the relationship between sentences.
+                           This results in an improvement by a factor of 2 over the best available baseline model using solely the Euclidean geometric space.
+                           Because this model is able to more accurately calculate the semantic similarity between two sentences, it can be used to rank documents in a database based on a user-provided query.
+                           </br>
+                           </br>
+                           This uses the <a href="https://paperswithcode.com/dataset/sick">SICK</a> (Sentences Involving Compositional Knowledge) dataset and expands upon work done in <a href="https://arxiv.org/abs/2205.02047">Hyperbolic Relevance Matching
+                           for Neural Keyphrase Extraction</a>.
+                           </br>
+                           </br>
+                           Developed in Python using PyTorch.
+                        </p>
+                     </div>
+                     <div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
+                        <ul>
+                           <li>
+                              <a href="HyperbolicSemanticSearch.zip" target="_blank" download><button>&#11123; Download</button></a>
+                           </li>
+                           <li>
+                              <a href="https://github.com/AaronMoseley/HyperbolicSemanticSearch" target="_blank" download><button>Github</button></a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                  <div class="project">
+                     <img src="NOPTREX.png" alt="Project 2">
+                     <div class="project-description">
+                        <h2>NOPTREX Readout Software</h2>
+                        <p>
+                           Presented at NCUR 2023 and APS April Meeting 2023.
+                           </br>
+                           </br>
+                           A multi-channel readout software for the Neutron Optics Parity and Time-Reversal Experiment (NOPTREX). 
+                           The experiment is investigating time-reversal violations in low-energy neutron reactions by monitoring the levels of gamma radiation emitted after the collision of an accelerated neutron with a heavy target.
+                           Through this, we hope to be able to explain the Baryon Asymmetry of the early universe.
+                           </br>
+                           </br>
+                           This readout software was developed in C++ using the ROOT framework. It communicates in real time with custom firmware on a CAEN DT5560SE digitizer.
+                           It has already been successfully tested on a particle accelerator at the j-PARC (Japan Proton Accelerator Research Complex) campus and will be used in an experiment at the Los Alamos National Lab later this year.
+                        </p>
+                     </div>
+                     <div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
+                        <ul>
+                           <li>
+                              <a href="NOPTREXPoster.pdf" target="_blank" download><button>&#11123; Download Poster</button></a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                  <div class="project">
+                     <img src="ErosionSim.png" alt="Project 3">
+                     <div class="project-description">
+                        <h2>Hydraulic Erosion Simulator</h2>
+                        <p>
+                           Realistically simulates hydraulic erosion on user-defined or procedurally generated terrain. Allows the user to customize both the initial terrain and the erosion process to create unique features.
+                           </br>
+                           </br>
+                           Uses Perlin Noise algorithm to randomly generate initial terrain.
+                           Visualizes gradual erosion in real-time and creates report detailing its effects on the terrain.
+                           </br>
+                           </br>
+                           Press H to hide all UI elements, press G to hide all tips.
+                           </br>
+                           </br>
+                           Developed in Unity using C#.
+                        </p>
+                     </div>
+                     <div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
+                        <ul>
+                           <li>
+                              <a href="HydraulicErosion.zip" target="_blank" download><button>&#11123; Download</button></a>
+                           </li>
+                           <li>
+                              <a href="https://github.com/AaronMoseley/HydraulicErosion" target="_blank"><button>Github</button></a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                  <div class="project">
+                     <img src="PhantomMansion.png" alt="Project 4">
+                     <div class="project-description">
+                        <h2>Phantom Mansion - MLH Hackathon 1st Place Winner</h2>
+                        <p>
+                           Won 1st place at CatHacks VIII Hackathon. Presented at the University of Kentucky's E-Day 2023.
+                           </br>
+                           </br>
+                           A haunted house roguelike game with the goal of finding treasure at the top of a ghost-infested house.
+                           Multiple difficulty levels are available and high scores are saved for each player.
+                           All levels are randomly generated using randomized depth-first search and ghost AI is implemented using breadth-first-search.
+                           </br>
+                           </br>
+                           Developed in C#.
+                        </p>
+                     </div>
+                     <div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
+                        <ul>
+                           <li>
+                              <a href="PhantomMansion.zip" target="_blank" download><button>&#11123; Download</button></a>
+                           </li>
+                           <li>
+                              <a href="https://github.com/AaronMoseley/CatHacks8" target="_blank"><button>Github</button></a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                  <div class="project">
+                     <img src="Platformer.png" alt="Project 5">
+                     <div class="project-description">
+                        <h2>Platformer</h2>
+                        <p>
+                           A fully-featured 2D platformer with multiple novel game mechanics, including advanced player movement, a grappling hook, and challenging puzzles.
+                           Implements and standardizes quality-of-life features such as save states and user-modifiable controls in Unity.
+                           Includes multiple levels, varied enemies, and a boss fight.
+                           </br>
+                           </br>
+                           The tech demo incorporates more gameplay mechanics including advanced enemy AI using A* pathfinding, an inventory system, a health system, and NPCs with dialogue.
+                           </br>
+                           </br>
+                           Developed in Unity using C#.
+                        </p>
+                     </div>
+                     <div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
+                        <ul>
+                           <li>
+                              <a href="2DPlatformer.zip" target="_blank" download><button>&#11123; Full Game</button></a>
+                           </li>
+                           <li>
+                              <a href="PlatformerTechDemo.zip" target="_blank" download><button>&#11123; Tech Demo</button></a>
+                           </li>
+                           <li>
+                              <a href="https://github.com/AaronMoseley/Platformer" target="_blank"><button>Github</button></a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                  <div class="project">
+                     <img src="MLCalculator.png" alt="Project 6">
+                     <div class="project-description">
+                        <h2>Machine Learning Calculator</h2>
+                        <p>
+                           A handwriting-recognizing calculator trained on the MNIST handwritten numbers dataset.
+                           Uses a linear image classification model manually implemented in C#.
+                           Allows user to draw on canvas to enter numbers and retrain the model using custom hyperparameters.
+                           </br>
+                           </br>
+                           Press escape to close the program and backspace to delete the last written character.
+                           </br>
+                           </br>
+                           Developed in Unity using C#.
+                        </p>
+                     </div>
+                     <div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
+                        <ul>
+                           <li>
+                              <a href="MLCalculator.zip" target="_blank" download><button>&#11123; Download</button></a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                  <div class="project">
+                     <img src="FileTransfer.png" alt="Project 7">
+                     <div class="project-description">
+                        <h2>File Transfer Protocols</h2>
+                        <p>
+                           A set of 3 client-server file transfer protocols. Each protocol allows two users to request files from each other or from a central server.
+                           By communicating with the server that can make requests on behalf of clients, users can send and receive files of any type to and from each other.
+                           Users are able to request multiple files of varying extensions in a single command, even if some files are on different machines.
+                           </br>
+                           </br>
+                           Each protocol was developed in Python.
+                        </p>
+                     </div>
+                     <div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
+                        <ul>
+                           <li>
+                              <a href="FileTransferProtocols.zip" target="_blank" download><button>&#11123; Download</button></a>
+                           </li>
+                           <li>
+                              <a href="https://github.com/AaronMoseley/FileTransferProtocol" target="_blank"><button>Github</button></a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                  <div class="project">
+                     <img src="PixelPhysics.png" alt="Project 8">
+                     <div class="project-description">
+                        <h2>Pixel Physics</h2>
+                        <p>
+                           A game that physically simulates 1,500 pixels of different materials on a canvas. 
+                           Each material behaves uniquely (e.g. fire burning wood or sand displacing water), allowing the user to create a great number of interesting scenarios.
+                           </br>
+                           </br>
+                           Numbers 1-5 switch between different materials. Use the left and right mouse buttons to place and remove material. Press R to reset the canvas and escape to close the program.
+                           </br>
+                           </br>
+                           Developed in Unity using C#.
+                        </p>
+                     </div>
+                     <div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
+                        <ul>
+                           <li>
+                              <a href="PixelPhysics.zip" target="_blank" download><button>&#11123; Download</button></a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </li>
+            </ul>
+         </section>
+         <section id="job-experience">
+            <h1 class="section-header">Professional Experience</h1>
+            <table class="timeline" style="width: 100%; empty-cells: show; table-layout: fixed;">
+               <tr>
+                  <td class="job-experience-content">
+                     <h3 class="job-experience-title">CAD Software Engineer Intern</h3>
+                     <div class="job-experience-company">Infineon</div>
+                  </td>
+                  <td class="job-experience-date">May 2023 - August 2023</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td></td>
+                  <td class="job-experience-date">January 2023 - Present</td>
+                  <td class="job-experience-content">
+                     <h3 class="job-experience-title">Medical Imaging/Machine Learning Research Assistant</h3>
+                     <div class="job-experience-company">University of Kentucky</div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="job-experience-content">
+                     <h3 class="job-experience-title">Nuclear Physics Research Assistant</h3>
+                     <div class="job-experience-company">University of Kentucky</div>
+                  </td>
+                  <td class="job-experience-date">August 2022 - Present</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td></td>
+                  <td class="job-experience-date">August 2022 - Present</td>
+                  <td class="job-experience-content">
+                     <h3 class="job-experience-title">CS216 Teaching Assistant</h3>
+                     <div class="job-experience-company">University of Kentucky</div>
+                  </td>
+               </tr>
+               <tr>
+                  <td class="job-experience-content">
+                     <h3 class="job-experience-title">Engineering and Technology Intern</h3>
+                     <div class="job-experience-company">Lockheed Martin Missiles and Fire Control</div>
+                  </td>
+                  <td class="job-experience-date">May 2022 - August 2022</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td></td>
+                  <td class="job-experience-date">January 2022 - May 2022</td>
+                  <td class="job-experience-content">
+                     <h3 class="job-experience-title">CS215 Teaching Assistant</h3>
+                     <div class="job-experience-company">University of Kentucky</div>
+                  </td>
+               </tr>
+            </table>
+         </section>
+      </main>
+      <footer>
+         <p>&copy; 2023 Aaron Moseley</p>
+      </footer>
+      <script>
+         if(screen.width > 767)
+          {
+         window.onload = function () {
+             //Create a new instance of the application
+             const application = new Application();
+         
+             //Initialize the CircleContainer objects
+             application.initializeCircleContainers();
+         
+             //Start the initial loop function for the first time
+             application.loop();
+         };
+          } else {
+           document.getElementById("canvas").style = "display: none;";
+          }
+         
+         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+             anchor.addEventListener('click', function (e) {
+                 e.preventDefault();
+         
+                 document.querySelector(this.getAttribute('href')).scrollIntoView({
+                     behavior: 'smooth'
+                 });
+             });
+         });
+         
+         const navbar = document.querySelector('#navbar');
+         const position = 100;
+         
+         window.addEventListener('scroll', () => {
+           if (window.scrollY > position) {
+             navbar.classList.add('navbar-small');
+           } else {
+             navbar.classList.remove('navbar-small');
+           }
+         });
+         
+         /**
+          * Constants
+          */
+         const TWO_PI = Math.PI * 2;
+         
+         /**
+          * Application Class
+          */
+         class Application {
+             /**
+              * Application constructor
+              */
+             constructor() {
+                 this.canvas = document.getElementById("canvas");
+                 this.context = this.canvas.getContext("2d");
+                 this.width = this.canvas.width = window.innerWidth;
+                 this.height = this.canvas.height = window.innerHeight;
+                 this.center = {
+                     x: this.width / 2,
+                     y: this.height / 2
+                 };
+         
+                 this.circleContainers = [];
+         
+                 //Resize listener for the canvas to fill browser window dynamically
+                 window.addEventListener('resize', () => this.resizeCanvas(), false);
+             }
+         
+             /**
+              * Simple resize function. Reinitializes everything on the canvas while changing the width/height
+              */
+             resizeCanvas() {
+                 this.width = this.canvas.width = window.innerWidth;
+                 this.height = this.canvas.height = window.innerHeight;
+                 this.center = {
+                     x: this.width / 2,
+                     y: this.height / 2
+                 };
+         
+                 //Empty the previous container and fill it again with new CircleContainer objects
+                 this.circleContainers = [];
+                 this.initializeCircleContainers();
+             }
+         
+             /**
+              * Create a number of CircleContainer objects based on the numberOfContainers variable
+              * @return void
+              */
+             initializeCircleContainers() {
+                 for (let x = 0; x < this.width + 100; x += 100) {
+                     for (let y = 0; y < this.height + 100; y += 100) {
+                         //Initialize a new instance of the CircleContainer class
+                         let circleContainer = new CircleContainer(this.context, x, y);
+         
+                         //Let the CircleContainer initialize it's children
+                         circleContainer.initializeCircles();
+         
+                         //Add the container to our array of CircleContainer objects
+                         this.circleContainers.push(circleContainer);
+                     }
+                 }
+             }
+         
+             /**
+              * Updates the application and every child of the application
+              * @return void
+              */
+             update() {
+                 for (let i = 0; i < this.circleContainers.length; i++) {
+                     this.circleContainers[i].update();
+                 }
+             }
+         
+             /**
+              * Renders the application and every child of the application
+              * @return void
+              */
+             render() {
+                 //Clear the entire canvas every render
+                 this.context.clearRect(0, 0, this.width, this.height);
+         
+                 //Trigger the render function on every child element
+                 for (let i = 0; i < this.circleContainers.length; i++) {
+                     this.circleContainers[i].render();
+                 }
+             }
+         
+             /**
+              * Update and render the application at least 60 times a second
+              * @return void
+              */
+             loop() {
+                 if(screen.width > 767)
+                 {
+                   this.update();
+                   this.render();
+                   document.querySelector("#canvas").style.backgroundColor = "#f2f2f2";
+                 } else {
+                   document.querySelector("#canvas").style.backgroundColor = "transparent";
+                 }
+         
+                 window.requestAnimationFrame(() => this.loop());
+             }
+         }
+         
+         /**
+          * CircleContainer Class
+          */
+         class CircleContainer {
+             /**
+              * CircleContainer constructor
+              * @param context - The context from the canvas object of the Application
+              * @param x
+              * @param y
+              */
+             constructor(context, x, y) {
+                 this.context = context;
+                 this.position = {x, y};
+         
+                 this.numberOfCircles = 12;
+                 this.circles = [];
+         
+                 this.baseRadius = 20;
+                 this.bounceRadius = 200;
+                 this.singleSlice = TWO_PI / this.numberOfCircles;
+             }
+         
+             /**
+              * Create a number of Circle objects based on the numberOfCircles variable
+              * @return void
+              */
+             initializeCircles() {
+                 for (let i = 0; i < this.numberOfCircles; i++) {
+                     this.circles.push(new Circle(this.position.x, this.position.y + Math.random(), this.baseRadius, this.bounceRadius, i * this.singleSlice));
+                 }
+             }
+         
+             /**
+              * Try to update the application at least 60 times a second
+              * @return void
+              */
+             update() {
+                 for (let i = 0; i < this.numberOfCircles; i++) {
+                     this.circles[i].update(this.context);
+                 }
+             }
+         
+             /**
+              * Try to render the application at least 60 times a second
+              * @return void
+              */
+             render() {
+                 for (let i = 0; i < this.numberOfCircles; i++) {
+                     this.circles[i].render(this.context);
+                 }
+             }
+         }
+         
+         /**
+          * Circle Class
+          */
+         class Circle {
+             /**
+              * Circle constructor
+              * @param x - The horizontal position of this circle
+              * @param y - The vertical position of this circle
+              * @param baseRadius
+              * @param bounceRadius
+              * @param angleCircle
+              */
+             constructor(x, y, baseRadius, bounceRadius, angleCircle) {
+                 this.basePosition = {x, y};
+                 this.position = {x, y};
+                 this.speed = 0.001;
+                 this.baseSize = 20;
+                 this.size = 10;
+                 this.angle = (x + y);
+                 this.baseRadius = baseRadius;
+                 this.bounceRadius = bounceRadius;
+                 this.angleCircle = angleCircle;
+             }
+         
+             /**
+              * Update the position of this object
+              * @return void
+              */
+             update() {
+         
+               var height = 0.85 * screen.height;
+         
+         	  var cutoffY = height;
+         	  var maxSize = 40;
+         
+         	  this.position.x = this.basePosition.x + Math.cos(this.angleCircle) * (Math.sin(this.angle + this.angleCircle) * this.bounceRadius + this.baseRadius);
+                 this.position.y = this.basePosition.y + Math.sin(this.angleCircle) * (Math.sin(this.angle + this.angleCircle) * this.bounceRadius + this.baseRadius);
+                 this.size = (Math.cos(this.angle) * 8) + this.baseSize;
+         
+         	  this.size = (1 - Math.max(0, Math.min(this.position.y, cutoffY) / cutoffY)) * this.size;
+         
+                 this.angle += this.speed;
+             }
+         
+             /**
+              * Renders this Circle object on the canvas
+              * @param context - The context from the canvas object of the Application
+              * @return void
+              */
+             render(context) {
+                 context.fillStyle = "hsl(0, 0%, "+((this.size * 2) + 60)+"%)";
+                 context.beginPath();
+                 context.arc(this.position.x, this.position.y, this.size, 0, TWO_PI);
+                 context.fill();
+             }
+         }
+         
+         /**
+          * Onload function is executed whenever the page is done loading, initializes the application
+          */
+      </script>
+   </body>
 </html>
