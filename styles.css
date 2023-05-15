@@ -341,3 +341,9 @@ button {
   border-radius: 5px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
+
+.section-header {
+  font-size: 35px;
+  font-weight: bolder;
+  color: black;
+}
