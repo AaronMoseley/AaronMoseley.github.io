@@ -4,6 +4,17 @@ body {
 	background-color: #f2f2f2;
 }
 
+@font-face {
+  font-family: "Noto";
+  src: url('NotoSans-Medium.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-family: 'Noto';
+}
+
 #grad {
   background: rgb(60,60,60);
 background: linear-gradient(180deg, rgba(60,60,60,1) 0%, #f2f2f2 100%);
