@@ -295,8 +295,8 @@ button {
 .personalpic {
   border-radius: 50%;
   float: left;
-  height: 90%;
-  width: 90%;
+  height: 30%;
+  width: 30%;
   margin-right: 2%;
 }
 
