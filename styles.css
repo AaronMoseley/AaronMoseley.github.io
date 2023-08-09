@@ -1,17 +1,7 @@
 body {
 	margin: 0;
 	background-color: #f2f2f2;
-}
-
-@font-face {
-  font-family: "Noto";
-  src: url('NotoSans-Medium.ttf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #grad {
