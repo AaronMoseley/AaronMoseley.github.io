@@ -62,7 +62,7 @@
                         My primary interests are related to machine learning, specifically decision-making artificial intelligence. But, I have a wide variety of experience, including game development, physics simulations, web development, and computer networking.
                      </p>
                      <div class="buttons">
-                        <a href="AaronMoseleyResume.pdf" target="_blank" download><button>&#129139; Resume</button></a>
+                        <a href="AaronMoseleyResume.pdf" target="_blank" download><button>Resume</button></a>
                         <a href="https://github.com/AaronMoseley" target="_blank"><button>Github</button></a>
                         <a href="https://www.linkedin.com/in/aaron-moseley/" target="_blank"><button>LinkedIn</button></a>
                      </div>
@@ -177,7 +177,7 @@
                      <div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
                         <ul>
                            <li>
-                              <a href="HyperbolicSemanticSearch.zip" target="_blank" download><button>&#129139; Download</button></a>
+                              <a class="download-button" href="HyperbolicSemanticSearch.zip" target="_blank" download><button>&#129095; Download</button></a>
                            </li>
                            <li>
                               <a href="https://github.com/AaronMoseley/HyperbolicSemanticSearch" target="_blank" download><button>Github</button></a>
@@ -207,7 +207,7 @@
                      <div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
                         <ul>
                            <li>
-                              <a href="NOPTREXPoster.pdf" target="_blank" download><button>&#129139; Poster</button></a>
+                              <a class="download-button" href="NOPTREXPoster.pdf" target="_blank" download><button>&#129095; Poster</button></a>
                            </li>
                         </ul>
                      </div>
@@ -235,7 +235,7 @@
                      <div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
                         <ul>
                            <li>
-                              <a href="HydraulicErosion.zip" target="_blank" download><button>&#129139; Download</button></a>
+                              <a class="download-button" href="HydraulicErosion.zip" target="_blank" download><button>&#129095; Download</button></a>
                            </li>
                            <li>
                               <a href="https://github.com/AaronMoseley/HydraulicErosion" target="_blank"><button>Github</button></a>
@@ -264,7 +264,7 @@
                      <div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
                         <ul>
                            <li>
-                              <a href="PhantomMansion.zip" target="_blank" download><button>&#129139; Download</button></a>
+                              <a class="download-button" href="PhantomMansion.zip" target="_blank" download><button>&#129095; Download</button></a>
                            </li>
                            <li>
                               <a href="https://github.com/AaronMoseley/CatHacks8" target="_blank"><button>Github</button></a>
@@ -296,10 +296,10 @@
                      <div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
                         <ul>
                            <li>
-                              <a href="2DPlatformer.zip" target="_blank" download><button>&#129139; Full Game</button></a>
+                              <a class="download-button" href="2DPlatformer.zip" target="_blank" download><button>&#129095; Full Game</button></a>
                            </li>
                            <li>
-                              <a href="PlatformerTechDemo.zip" target="_blank" download><button>&#129139; Tech Demo</button></a>
+                              <a class="download-button" href="PlatformerTechDemo.zip" target="_blank" download><button>&#129095; Tech Demo</button></a>
                            </li>
                            <li>
                               <a href="https://github.com/AaronMoseley/Platformer" target="_blank"><button>Github</button></a>
@@ -328,7 +328,7 @@
                      <div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
                         <ul>
                            <li>
-                              <a href="MLCalculator.zip" target="_blank" download><button>&#129139; Download</button></a>
+                              <a class="download-button" href="MLCalculator.zip" target="_blank" download><button>&#129095; Download</button></a>
                            </li>
                         </ul>
                      </div>
@@ -351,7 +351,7 @@
                      <div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
                         <ul>
                            <li>
-                              <a href="FileTransferProtocols.zip" target="_blank" download><button>&#129139; Download</button></a>
+                              <a class="download-button" href="FileTransferProtocols.zip" target="_blank" download><button>&#129095; Download</button></a>
                            </li>
                            <li>
                               <a href="https://github.com/AaronMoseley/FileTransferProtocol" target="_blank"><button>Github</button></a>
@@ -379,7 +379,7 @@
                      <div class="buttons" style="margin-left:auto;margin-right:0;float:right;">
                         <ul>
                            <li>
-                              <a href="PixelPhysics.zip" target="_blank" download><button>&#129139; Download</button></a>
+                              <a class="download-button" href="PixelPhysics.zip" target="_blank" download><button>&#129095; Download</button></a>
                            </li>
                         </ul>
                      </div>
@@ -394,18 +394,22 @@
       <script>
          if(screen.width > 767)
           {
-         window.onload = function () {
-             //Create a new instance of the application
-             const application = new Application();
-         
-             //Initialize the CircleContainer objects
-             application.initializeCircleContainers();
-         
-             //Start the initial loop function for the first time
-             application.loop();
-         };
+            window.onload = function () {
+               //Create a new instance of the application
+               const application = new Application();
+            
+               //Initialize the CircleContainer objects
+               application.initializeCircleContainers();
+            
+               //Start the initial loop function for the first time
+               application.loop();
+            };
           } else {
            document.getElementById("canvas").style = "background-color: transparent;";
+
+           document.querySelectorAll(".download-button").forEach((button) => {
+               button.style.display = "none";
+            });
           }
          
          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
