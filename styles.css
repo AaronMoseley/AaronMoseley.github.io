@@ -370,3 +370,46 @@ button {
   font-weight: bolder;
   color: black;
 }
+
+.portfolio-news {
+  padding: 20px;
+  margin: 20px;
+  border-top: 1px solid #ccc;
+}
+
+/* Style the header */
+.portfolio-news h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Style the news list */
+.news-list {
+  list-style-type: none;
+}
+
+.news-list li {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.news-list h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.portfolio-news p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.4;
+}
+
+.news-date {
+  font-size: 14px;
+  color: #888;
+  display: block;
+  margin-bottom: 5px;
+}
