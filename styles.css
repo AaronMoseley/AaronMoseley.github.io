@@ -418,9 +418,9 @@ button {
 
 .portfolio {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 30%);
+  grid-template-columns: repeat(auto-fill, 25%);
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   margin: 20px;
 }
 
@@ -438,7 +438,7 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 200px; /* Set a fixed height for the project items */
+  height: 225px; /* Set a fixed height for the project items */
 }
 
 /* Styles for the project background */
@@ -447,7 +447,7 @@ button {
 /* Styles for the project image */
 .project-image {
   max-width: 100%;
-  max-height: 150px;
+  max-height: 155px;
   width: auto;
   height: auto;
   vertical-align: middle;
@@ -457,7 +457,8 @@ button {
 /* Styles for the project title */
 .project-title {
   font-weight: bold;
-  margin-top: 5px;
+  height: 15%;
+  margin: 0px;
 }
 
 /* Styles for the popup */
