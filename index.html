@@ -197,6 +197,22 @@
          <section id="projects">
             <h1 class="section-header">Projects</h1>
             <div class="portfolio">
+               <div class="project-item" onclick="showPopup('PolyCL: Context-Aware Contrastive Learning for Image Segmentation', 
+               'A novel contrastive learning framework using an example selection strategy leveraging whether slices contain the target organ and to which CT scan each slice belongs. This framework has shown to improve over supervised baseline models and the popular contrastive learning strategy SimCLR. <br> <br> This project was presented as a poster at the 2023 Commonwealth Computational Summit and was submitted as a 4-page paper to ISBI 2024. <br> <br> All work was done in Python using PyTorch.', 
+               ['&#129095; Poster', '&#129095; Paper'], ['AaronMoseleyCCSPoster.pptx', 'PolyCLPaper.pdf'], [true, true])">
+                  <div class="project-background">
+                     <img class="project-image" src="PolyCL.png" alt="PolyCL">
+                  </div>
+                  <div class="project-title">PolyCL: Contrastive Learning Framework</div>
+               </div>
+               <div class="project-item" onclick="showPopup('CMU-Net: Context-Aware Multitasking for Medical Image Segmentation', 
+               'An innovative multitasking strategy for medical image segmentation leveraging image-level labels that enable a secondary task of organ detection. By combining the training of the encoder of the U-Net model on organ detection with the entire model\'s training on image segmentation, we found significant benefits over baseline models trained solely on segmentation. <br> <br> This project was given as an oral presentation at the University of Kentucky\'s 5 Minute Fast Track undergraduate research event. <br> <br> All work was done in Python using PyTorch.', 
+               ['&#129095; Presentation Slide'], ['CMU-Net5MinuteFastTrack.pdf'], [true])">
+                  <div class="project-background">
+                     <img class="project-image" src="CMU-Net.png" alt="CMU-Net">
+                  </div>
+                  <div class="project-title">CMU-Net: Context-Aware Multitasking for Segmentation</div>
+               </div>
                <div class="project-item" onclick="showPopup('Shoulder-Mounted Space Program', 
                'A game demo featuring custom orbital physics manually implemented in C#. The player uses a rocket launcher to launch themself from planet to planet in an infinitely generating solar system. </br> </br> The gravitational physics system realistically simulates the forces between planets and other planets, the player, and projectiles. The player must use this system to their advantage to avoid enemies and attain higher scores. </br> </br> Developed in Unity using C#.', 
                ['&#129095; Download'], ['SMSP.zip'], [true])">
@@ -247,14 +263,6 @@
                   </div>
                   <div class="project-title">Platformer</div>
                </div>
-               <div class="project-item" onclick="showPopup('Machine Learning Calculator', 
-               'A handwriting-recognizing calculator trained on the MNIST handwritten numbers dataset. Uses a linear image classification model manually implemented in C#. Allows user to draw on canvas to enter numbers and retrain the model using custom hyperparameters. </br> </br> Press escape to close the program and backspace to delete the last written character. </br> </br> Developed in Unity using C#.', 
-               ['&#129095; Download'], ['MLCalculator.zip'], [true])">
-                  <div class="project-background">
-                     <img class="project-image" src="MLCalculator.png" alt="Project 1">
-                  </div>
-                  <div class="project-title">Machine Learning Calculator</div>
-               </div>
                <div class="project-item" onclick="showPopup('File Transfer Protocols', 
                'A set of 3 client-server file transfer protocols. Each protocol allows two users to request files from each other or from a central server. By communicating with the server that can make requests on behalf of clients, users can send and receive files of any type to and from each other. Users are able to request multiple files of varying extensions in a single command, even if some files are on different machines. </br> </br> Each protocol was developed in Python.', 
                ['&#129095; Download', 'Github'], ['FileTransferProtocols.zip', 'https://github.com/AaronMoseley/FileTransferProtocol'], [true, false])">
@@ -262,14 +270,6 @@
                      <img class="project-image" src="FileTransfer.png" alt="Project 1">
                   </div>
                   <div class="project-title">File Transfer Protocols</div>
-               </div>
-               <div class="project-item" onclick="showPopup('Pixel Physics', 
-               'A game that physically simulates 1,500 pixels of different materials on a canvas.  Each material behaves uniquely (e.g. fire burning wood or sand displacing water), allowing the user to create a great number of interesting scenarios. </br> </br> Numbers 1-5 switch between different materials. Use the left and right mouse buttons to place and remove material. Press R to reset the canvas and escape to close the program. </br> </br> Developed in Unity using C#.', 
-               ['&#129095; Download'], ['PixelPhysics.zip'], [true])">
-                  <div class="project-background">
-                     <img class="project-image" src="PixelPhysics.png" alt="Project 1">
-                  </div>
-                  <div class="project-title">Pixel Physics</div>
                </div>
             </div>
             <div class="popup" id="popup" onclick="closePopup(event)">
