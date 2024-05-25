@@ -160,7 +160,7 @@ footer p {
 
 #skills {
   background-color: #f2f2f2;
-  padding: 80px 0;
+  padding: 0px 0;
 }
 
 #skills h2 {
@@ -284,10 +284,10 @@ button {
 }
 
 .personalpic {
-  border-radius: 50%;
+  border-radius: 10%;
   float: left;
-  height: 100%;
-  width: 100%;
+  height: 90%;
+  width: 90%;
   margin-right: 2%;
 }
 
