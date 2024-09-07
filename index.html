@@ -61,8 +61,9 @@
                   <div class="col-sm-12 col-lg-9" style="overflow: hidden;">
                      <h1 class="section-header">Aaron Moseley</h1>
                      <p>
-                        I'm a <i>summa cum laude</i> graduate of the Lewis Honors College at the University of Kentucky where I received a Bachelor of Science in Computer Science and Mathematics in May 2024.
-                        I'm currently working as a machine learning engineer intern at Carlson Software where I'm finding improvements for image segmentation models applied to satellite imagery and creating an application that allows engineers to create ground-truth data for line detection tasks.
+                        I'm currently working as a machine learning engineer at Carlson Software and graduated <i>summa cum laude</i> from the University of Kentucky's Lewis Honors College in May 2024 with a Bachelor of Science in Computer Science and Mathematics.
+                        My work focuses on self-supervised learning in computer vision tasks like image segmentation and boundary detection with aerial images for use in CAD applications.
+                        In addition to designing and training deep learning models, I've created multiple applications for our team to create high-quality ground-truth data.
                         </br>
                         </br>
                         I've previously been a research assistant in medical imaging at the University of Kentucky, finding novel training methods for image segmentation models. In this capacity, I wrote a paper that was published to ISBI 2024 and presented a poster at UK's Commonwealth Computational Summit 2023.
@@ -139,56 +140,64 @@
             <table class="timeline" style="width: 100%; empty-cells: show; table-layout: fixed;">
                <tr>
                   <td class="job-experience-content">
-                     <h3 class="job-experience-title">Machine Learning Engineer Intern</h3>
-                     <div class="job-experience-company">Carson Software</div>
+                     <h3 class="job-experience-title">Machine Learning Engineer</h3>
+                     <div class="job-experience-company">Carlson Software</div>
                   </td>
-                  <td class="job-experience-date">May 2024 - August 2024</td>
+                  <td class="job-experience-date">August 2024 - Current</td>
                   <td></td>
                </tr>
                <tr>
                   <td></td>
-                  <td class="job-experience-date">January 2023 - January 2024</td>
+                  <td class="job-experience-date">May 2024 - August 2024</td>
+                  <td class="job-experience-content">
+                     <h3 class="job-experience-title">Machine Learning Engineer Intern</h3>
+                     <div class="job-experience-company">Carlson Software</div>
+                  </td>
+               </tr>
+               <tr>
                   <td class="job-experience-content">
                      <h3 class="job-experience-title">Medical Imaging/Machine Learning Research Assistant</h3>
                      <div class="job-experience-company">University of Kentucky</div>
                   </td>
+                  <td class="job-experience-date">January 2023 - January 2024</td>
+                  <td></td>
                </tr>
                <tr>
+                  <td></td>
+                  <td class="job-experience-date">August 2022 - May 2024</td>
                   <td class="job-experience-content">
                      <h3 class="job-experience-title">Nuclear Physics Research Assistant</h3>
                      <div class="job-experience-company">University of Kentucky</div>
                   </td>
-                  <td class="job-experience-date">August 2022 - May 2024</td>
-                  <td></td>
                </tr>
                <tr>
-                  <td></td>
-                  <td class="job-experience-date">May 2023 - August 2023</td>
                   <td class="job-experience-content">
                      <h3 class="job-experience-title">Computer Engineering Intern</h3>
                      <div class="job-experience-company">Infineon Technologies</div>
                   </td>
+                  <td class="job-experience-date">May 2023 - August 2023</td>
+                  <td></td>
                </tr>
                <tr>
+                  <td></td>
+                  <td class="job-experience-date">May 2022 - August 2022</td>
                   <td class="job-experience-content">
                      <h3 class="job-experience-title">Software Engineering Intern</h3>
                      <div class="job-experience-company">Lockheed Martin</div>
                   </td>
-                  <td class="job-experience-date">May 2022 - August 2022</td>
-                  <td></td>
                </tr>
             </table>
          </section>
          <section id="projects">
             <h1 class="section-header">Projects</h1>
             <div class="portfolio">
-               <div class="project-item" onclick="showPopup('Deep State-Value Esimation for Long-Term Planning', 
+               <div class="project-item" onclick="showPopup('Deep State-Value Estimation for Long-Term Planning', 
                'A novel reinforcement learning approach for long-term planning tasks that combines deep image analysis models with traditional tree-search algorithms. When training on strategy games, most state-of-the-art reinforcement learning approaches rely entirely on self-play or learning from human strategies. But, self-play leads to early versions of models making entirely random moves and takes longer to train while many tasks that require reinforcement learning don\'t have established human strategies to use when training models. This new approach, dubbed Deep-State Learning, introduces simple opponents that use hard-coded tree-search algorithms at the beginning of the training process. At this point, the opponents alternate between mutated self-play and these simple opponents. This strategy allows the model to initially learn intelligent but simple strategies before switching to self-play, reducing the random moves inherent to early models trained with self-play. <br> <br> An experimental analysis on a custom generic strategy game shows that Deep-State Learning performs better than traditional tree-search algorithms and models trained on self-play by up to 10%. <br> <br> This work was completed as my thesis for the University of Kentucky\'s Lewis Honors College under Dr. Jerzy Jaromczyk and Dr. Neil Moore. This project was developed in Python using PyTorch.', 
                ['Github'], ['https://github.com/AaronMoseley/HON491-DSL/tree/main'], [false])">
                   <div class="project-background">
                      <img class="project-image" src="DeepStateValueEstimation.png" alt="Deep State-Value Estimation">
                   </div>
-                  <div class="project-title">Deep State-Value Esimation for Long-Term Planning</div>
+                  <div class="project-title">Deep State-Value Estimation for Long-Term Planning</div>
                </div>
                <div class="project-item" onclick="showPopup('PolyCL: Context-Aware Contrastive Learning for Image Segmentation', 
                'A novel contrastive learning framework using an example selection strategy leveraging whether slices contain the target organ and to which CT scan each slice belongs. This framework has shown to improve over supervised baseline models and the popular contrastive learning strategy SimCLR. <br> <br> This project was published as a 4-page paper to ISBI 2024 and presented as a poster at the 2023 Commonwealth Computational Summit. <br> <br> All work was done in Python using PyTorch.', 
@@ -225,7 +234,7 @@
                </div>
                <!-- Add more project items as needed -->
                <div class="project-item" onclick="showPopup('NOPTREX Readout Software/Firmware', 
-               'Presented at NCUR 2023 and APS April Meeting 2023. </br> </br> A multi-channel readout software and digitizer firmware for the Neutron Optics Parity and Time-Reversal Experiment (NOPTREX).  The experiment is investigating time-reversal violations in low-energy neutron reactions by monitoring the levels of gamma radiation emitted after the collision of an accelerated neutron with a heavy target. Through this, we hope to be able to explain the Baryon Asymmetry of the early universe. </br> </br> This readout software was developed in C++ using the ROOT framework. It communicates in real time with custom firmware on a CAEN DT5560SE digitizer. It has already been successfully tested on a particle accelerator at the J-PARC (Japan Proton Accelerator Research Complex) campus and will be used in an experiment at the Los Alamos National Lab later this year.', 
+               'Presented at NCUR 2023 and APS April Meeting 2023. </br> </br> A multi-channel readout software and digitizer firmware for the Neutron Optics Parity and Time-Reversal Experiment (NOPTREX).  The experiment is investigating time-reversal violations in low-energy neutron reactions by monitoring the levels of gamma radiation emitted after the collision of an accelerated neutron with a heavy target. Through this, we hope to be able to explain the Baryon Asymmetry of the early universe. </br> </br> This readout software was developed in C++ using the ROOT framework. It communicates in real time with custom firmware on a CAEN DT5560SE digitizer. It has already been successfully tested on a particle accelerator at the J-PARC (Japan Proton Accelerator Research Complex) campus and the Los Alamos National Lab.', 
                ['&#129095; Poster'], ['NOPTREXPoster.pdf'], [true])">
                   <div class="project-background">
                      <img class="project-image" src="NOPTREX.png" alt="Project 1">
