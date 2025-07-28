@@ -101,12 +101,24 @@
             </div>
          </section>
          <section id="news">
-            <h1 class="section-header">Recent News</h1>
+            <h1 class="section-header">News and Updates</h1>
             <div class="portfolio-news">
                <ul class="news-list">
                   <li>
+                     <h3>May 2025</h3>
+                     <p>My project, <a href="#projects">PolyCL: Context-Aware Contrastive Learning for Image Segmentation</a>, has been adapted and published as a full-length paper on <a target="_blank" href="https://arxiv.org/abs/2505.19208">arXiv</a></p>
+                  </li>
+                  <li>
+                     <h3>May 2025</h3>
+                     <p>I've spearheaded the development and release of a road edge detection feature for Carlson IntelliCAD 2025 and Carlson Point Cloud</p>
+                  </li>
+                  <li>
                      <h3>January 2025</h3>
                      <p><a target="_blank" href="https://aaronmoseley.itch.io/helmeteers">Helmeteers</a>, a project I developed with my friend <a target="_blank" href="https://www.linkedin.com/in/thomas-noll-b273441b2/">Thomas Noll</a> over 3 days for the Winter Melon Jam 2024, placed in the top 10 games out of 233 total entries</p>
+                  </li>
+                  <li>
+                     <h3>November 2024</h3>
+                     <p>I've released a material boundary detection feature using a novel model architecture I created for Carlson IntelliCAD 2025</p>
                   </li>
                   <li>
                      <h3>May 2024</h3>
@@ -205,11 +217,19 @@
                </div>
                <div class="project-item" onclick="showPopup('PolyCL: Context-Aware Contrastive Learning for Image Segmentation', 
                'A novel contrastive learning framework using an example selection strategy leveraging whether slices contain the target organ and to which CT scan each slice belongs. This framework has shown to improve over supervised baseline models and the popular contrastive learning strategy SimCLR. <br> <br> This project was published as a 4-page paper to ISBI 2024 and presented as a poster at the 2023 Commonwealth Computational Summit. <br> <br> All work was done in Python using PyTorch.', 
-               ['&#129095; Poster', '&#129095; Paper', 'Github'], ['AaronMoseleyCCSPoster.pptx', 'PolyCLPaper.pdf', 'https://github.com/AaronMoseley/CTLiverSegmentation'], [false, true, true])">
+               ['&#129095; Poster', '&#129095; Paper', 'Github'], ['AaronMoseleyCCSPoster.pptx', 'PolyCLPaper.pdf', 'https://github.com/AaronMoseley/CTLiverSegmentation'], [true, true, false])">
                   <div class="project-background">
                      <img class="project-image" src="PolyCL.png" alt="PolyCL">
                   </div>
                   <div class="project-title">PolyCL: Contrastive Learning Framework</div>
+               </div>
+               <div class="project-item" onclick="showPopup('Fungi Vision - Skeletonization Research Tool', 
+               'A useful tool meant for biology researchers dealing with fungi that need to create skeletonized images. This tool is fully open-source and modular through the use of easy-to-understand JSON files where you can modify skeletonization pipelines. <br> <br> The tool contains modes for selecting certain line segments and clusters to view information about them or add notes on them, comparing against externally-generated skeletons, analyzing each step of the skeletonization process with modifiable parameters, and more. <br> <br> Additionally, I have created a demo YouTube video that explains how to use and adapt this tool to fit the purposes of any researcher. <br> <br> Multiple papers are in progress that make heavy use of this tool. When they are complete, they will also be linked here.', 
+               ['Github', 'Demo Video'], ['https://github.com/AaronMoseley/SkeletonizationTool', 'https://youtu.be/-0nsbsNzMa8'], [false, false])">
+                  <div class="project-background">
+                     <img class="project-image" src="FungiVision.png" alt="CMU-Net">
+                  </div>
+                  <div class="project-title">Fungi Vision</div>
                </div>
                <div class="project-item" onclick="showPopup('CMU-Net: Context-Aware Multitasking for Medical Image Segmentation', 
                'An innovative multitasking strategy for medical image segmentation leveraging image-level labels that enable a secondary task of organ detection. By combining the training of the encoder of the U-Net model on organ detection with the entire model\'s training on image segmentation, we found significant benefits over baseline models trained solely on segmentation. <br> <br> This project was given as an oral presentation at the University of Kentucky\'s 5 Minute Fast Track undergraduate research event. <br> <br> All work was done in Python using PyTorch.', 
