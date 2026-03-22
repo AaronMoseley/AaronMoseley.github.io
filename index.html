@@ -1,616 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-      <title>Aaron Moseley - Portfolio</title>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-      <link rel="stylesheet" href="styles.css">
-   </head>
-   <!-- Google tag (gtag.js) -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QNDWWZXDLL"></script>
-   <script>
-   window.dataLayer = window.dataLayer || [];
-   function gtag(){dataLayer.push(arguments);}
-   gtag('js', new Date());
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aaron Moseley</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-   gtag('config', 'G-QNDWWZXDLL');
-   </script>
-   <body>
-      <div id="grad" style="box-shadow: none; color: transparent;"></div>
-      <canvas id="canvas"></canvas>
-      <h1 style="position: absolute; width: 100%; text-align: center; top: 40%; font-size: 50px;">Hi, I'm Aaron Moseley</h1>
-      <!-- SVG Goo filter from: https://css-tricks.com/gooey-effect/ -->
-      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-         <defs>
-            <filter id="shadowed-goo">
-               <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
-               <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-               <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
-               <!--<feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />-->
-               <!--<feOffset in="shadow" dx="1" dy="1" result="shadow" />-->
-               <feBlend in2="shadow" in="goo" result="goo" />
-               <feBlend in2="goo" in="SourceGraphic" result="mix" />
-            </filter>
-            <filter id="goo">
-               <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
-               <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-               <feBlend in2="goo" in="SourceGraphic" result="mix" />
-            </filter>
-         </defs>
-      </svg>
-      <header>
-         <div>
-            <nav id="navbar" class="navbar nav" style="z-index: 1001;">
-               <ul>
-                  <li><a href="#about" style="text-decoration: none;">Aaron Moseley</a></li>
-                  <li><a href="#skills" style="text-decoration: none;">Skills</a></li>
-                  <li><a href="#news" style="text-decoration: none;">News</a></li>
-                  <li><a href="#job-experience" style="text-decoration: none;">Experience</a></li>
-                  <li><a href="#projects" style="text-decoration: none;">Projects</a></li>
-               </ul>
-            </nav>
-         </div>
+<div id="app">
+
+  <!-- ── HOME PAGE ──────────────────────────────────────────────── -->
+  <div id="page-home" class="page active">
+
+    <!-- About / Hero -->
+    <div class="about-section" id="about-section">
+      <div class="about-inner">
+        <div class="about-photo-wrapper">
+          <!--
+            TO ADD YOUR PHOTO: replace the placeholder below with:
+            <img class="about-photo" src="images/your-photo.jpg" alt="Your Name" />
+          -->
+          <img class="about-photo" src="images/AaronMoseleyPicture.jpeg" alt="Aaron Moseley Photo" />
+        </div>
+        <div class="about-text">
+          <h2 class="about-name" id="about-name">Your Name</h2>
+          <div class="about-bio" id="about-bio">
+            <p>
+              I'm a machine learning engineer at Carlson Software and graduated <i>summa cum laude</i> from the University of Kentucky in May 2024. While in school, I was a member of the Lewis Honors College and double-majored in Computer Science and Mathematics.
+              My work at Carlson focuses on self-supervised learning in computer vision tasks like image segmentation and boundary detection. These techniques are applied to aerial images for use by civil engineers in our Carlson IntelliCAD application.
+              In addition to designing and training deep learning models, I've created multiple applications that enable my team to generate and label ground-truth data as well as a custom HTTP server, API, and webpages for automating and visualizing training, inference, and evaluation.
+              </br>
+              </br>
+              I've previously worked as a research assistant in medical imaging and deep learning at the University of Kentucky, finding novel training methods for image segmentation models. In this capacity, I wrote a paper that was published to ISBI 2024 and presented a poster at UK's 2023 Commonwealth Computational Summit.
+              I was also a research assistant in the field of nuclear physics where I built a high-speed data acquisition system that was deployed in an experiment on the J-PARC particle accelerator. This experiment (NOPTREX) was performed to collect information about gamma radiation emissions from decaying neutrons.
+              </br>
+              </br>
+              Over the summers of 2022 and 2023, I interned at Lockheed Martin and Infineon Technologies. Through these internships, I gained experience building data analysis and report automation tools as well as developing physical verification rules for transistor-level devices.
+              I also spent four semesters as a teaching assistant and grader at the University of Kentucky where I graded assignments and instructed labs on topics ranging from UI development to intermediate C++ and Linux.
+            </p>
+          </div>
+          <div class="about-docs" id="about-docs" style="display:none;">
+            <!-- populated by renderer if cv/resume links are present -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Posts section -->
+    <section class="posts-section">
+      <div class="container">
+
+        <!-- Tabs + Tag filter -->
+        <div class="controls-row">
+          <div class="tab-bar" id="tab-bar">
+            <!-- populated by Controls.build() -->
+          </div>
+          <div class="filter-bar">
+            <span class="filter-label">Tag</span>
+            <select class="filter-select" id="tag-filter" onchange="app.controls.onTagChange(this.value)">
+              <option value="">All tags</option>
+              <!-- populated by Controls._populateTagFilter() -->
+            </select>
+          </div>
+        </div>
+
+        <div class="posts-grid" id="posts-grid">
+          <div class="loading"><div class="loading-dot"></div></div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span class="footer-name" id="footer-name">Your Name</span>
+        <div class="footer-links">
+          <a href="#" id="footer-email">Email</a>
+          <a href="#" id="footer-linkedin" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="#" id="footer-github" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /page-home -->
+
+
+  <!-- ── POST PAGE ──────────────────────────────────────────────── -->
+  <div id="page-post" class="page">
+    <div class="post-page">
+
+      <div class="post-back">
+        <button class="back-btn" onclick="app.showHome()">
+          <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
+            <path d="M5 1L1 5M1 5L5 9M1 5H13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          <span id="back-btn-name">Your Name</span>
+        </button>
+      </div>
+
+      <header class="post-header">
+        <div class="post-header-meta">
+          <span class="post-date"     id="post-date"></span>
+          <span class="post-location" id="post-location"></span>
+        </div>
+        <h1 class="post-title"        id="post-title"></h1>
+        <p  class="post-excerpt-lead" id="post-excerpt-lead"></p>
       </header>
-      <main>
-         <section id="about">
-            <div class="container-fluid">
-               <div class="row">
-                  <div class="offset-sm-2 col-sm-8 offset-lg-0 col-lg-3" style="width:80%;height:80%;">
-                     <img src="AaronPic.JPEG" class="personalpic" alt="Aaron Moseley">
-                  </div>
-                  <div class="col-sm-12 col-lg-9" style="overflow: hidden;">
-                     <h1 class="section-header">Aaron Moseley</h1>
-                     <p>
-                        I'm a machine learning engineer at Carlson Software and graduated <i>summa cum laude</i> from the University of Kentucky in May 2024. While in school, I was a member of the Lewis Honors College and double-majored in Computer Science and Mathematics.
-                        My work at Carlson focuses on self-supervised learning in computer vision tasks like image segmentation and boundary detection. These techniques are applied to aerial images for use by civil engineers in our Carlson IntelliCAD application.
-                        In addition to designing and training deep learning models, I've created multiple applications that enable my team to generate and label ground-truth data as well as a custom HTTP server, API, and webpages for automating and visualizing training, inference, and evaluation.
-                        </br>
-                        </br>
-                        I've previously worked as a research assistant in medical imaging and deep learning at the University of Kentucky, finding novel training methods for image segmentation models. In this capacity, I wrote a paper that was published to ISBI 2024 and presented a poster at UK's 2023 Commonwealth Computational Summit.
-                        I was also a research assistant in the field of nuclear physics where I built a high-speed data acquisition system that was deployed in an experiment on the J-PARC particle accelerator. This experiment (NOPTREX) was performed to collect information about gamma radiation emissions from decaying neutrons.
-                        </br>
-                        </br>
-                        Over the summers of 2022 and 2023, I interned at Lockheed Martin and Infineon Technologies. Through these internships, I gained experience building data analysis and report automation tools as well as developing physical verification rules for transistor-level devices.
-                        I also spent four semesters as a teaching assistant and grader at the University of Kentucky where I graded assignments and instructed labs on topics ranging from UI development to intermediate C++ and Linux.
-                     </p>
-                     <div class="buttons">
-                        <a href="AaronMoseleyResume.pdf" target="_blank" download><button>Resume</button></a>
-                        <a href="https://github.com/AaronMoseley" target="_blank"><button>Github</button></a>
-                        <a href="https://www.linkedin.com/in/aaron-moseley/" target="_blank"><button>LinkedIn</button></a>
-                        <a href="mailto:amoseley018@gmail.com" target="_blank"><button>Contact Me</button></a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
-         <section id="skills">
-            <div class="container-fluid">
-               <h1 class="section-header" style="text-align: center;">Skills</h1>
-               <ul>
-                  <li>C++</li>
-                  <li>C#</li>
-                  <li>Python / PyTorch</li>
-                  <li>Java</li>
-                  <li>PyQt</li>
-                  <li>SQL</li>
-                  <li>Unity</li>
-                  <li>LaTeX</li>
-                  <li>Vulkan</li>
-               </ul>
-            </div>
-         </section>
-         <section id="news">
-            <h1 class="section-header">News and Updates</h1>
-            <div class="portfolio-news">
-               <ul class="news-list">
-                  <li>
-                     <h3>December 2025</h3>
-                     <p>I've released my first commercial game, <a href="http://www.shouldermountedspaceprogram.com/" target="_blank">Shoulder-Mounted Space Program</a>: a new gravity-based action game, on Steam.</p>
-                  </li>
-                  <li>
-                     <h3>May 2025</h3>
-                     <p>My project, <a href="#projects">PolyCL: Context-Aware Contrastive Learning for Image Segmentation</a>, has been adapted and published as a full-length paper on <a target="_blank" href="https://arxiv.org/abs/2505.19208">arXiv</a></p>
-                  </li>
-                  <li>
-                     <h3>May 2025</h3>
-                     <p>I've led the development and release of a road edge detection feature for Carlson IntelliCAD 2025 and Carlson Point Cloud</p>
-                  </li>
-                  <li>
-                     <h3>January 2025</h3>
-                     <p><a target="_blank" href="https://aaronmoseley.itch.io/helmeteers">Helmeteers</a>, a project I developed with my friend <a target="_blank" href="https://www.linkedin.com/in/thomas-noll-b273441b2/">Thomas Noll</a> over 3 days for the Winter Melon Jam 2024, placed in the top 10 games out of 233 total entries</p>
-                  </li>
-                  <li>
-                     <h3>November 2024</h3>
-                     <p>I've released a material boundary detection feature using a novel model architecture I created for Carlson IntelliCAD 2025</p>
-                  </li>
-                  <li>
-                     <h3>May 2024</h3>
-                     <p>I have graduated <i>summa cum laude</i> from the Lewis Honors College at the University of Kentucky</p>
-                  </li>
-                  <li>
-                     <h3>March 2024</h3>
-                     <p>I have received the University of Kentucky Department of Computer Science's award for Outstanding Academic Achievement</p>
-                  </li>
-                  <li>
-                     <h3>February 2024</h3>
-                     <p>My paper, <a href="#projects">PolyCL: Context-Aware Contrastive Learning for Image Segmentation</a> has been accepted as a full paper at <a target="_blank" href="https://biomedicalimaging.org/2024/">ISBI 2024</a></p>
-                  </li>
-                  <li>
-                     <h3>September 2023</h3>
-                     <p>I have been accepted as a University of Kentucky College of Engineering Undergraduate Research Fellow for my work in medical image segmentation</p>
-                  </li>
-                  <li>
-                     <h3>April 2023</h3>
-                     <p>I have presented my project, <a href="#projects">Developing a Readout Software for the NOPTREX Experiment</a>, as a poster at <a href="https://www.cur.org/events-services/ncur/">NCUR 2023</a> and <a href="https://meetings.aps.org/Meeting/APR23/Content/4364">APS 2023</a></p>
-                  </li>
-                  <li>
-                     <h3>February 2023</h3>
-                     <p>I helped in the successful testing of a readout software and firmware I developed for the NOPTREX experiment on a particle accelerator at the Japan Proton Accelerator Research Complex</p>
-                  </li>
-                  <li>
-                     <h3>April 2022</h3>
-                     <p><a href="#projects">Phantom Mansion</a>, a project created by myself and <a target="_blank" href="https://www.linkedin.com/in/thomas-noll-b273441b2/">Thomas Noll</a> has won 1st Place Overall at the University of Kentucky's CatHacks Hackathon</p>
-                  </li>
-               </ul>
-            </div>
-         </section>
-         <section id="job-experience">
-            <h1 class="section-header">Professional Experience</h1>
-            <table class="timeline" style="width: 100%; empty-cells: show; table-layout: fixed;">
-               <tr>
-                  <td class="job-experience-content">
-                     <h3 class="job-experience-title">Machine Learning Engineer</h3>
-                     <div class="job-experience-company">Carlson Software</div>
-                  </td>
-                  <td class="job-experience-date">August 2024 - Current</td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td></td>
-                  <td class="job-experience-date">May 2024 - August 2024</td>
-                  <td class="job-experience-content">
-                     <h3 class="job-experience-title">Machine Learning Engineer Intern</h3>
-                     <div class="job-experience-company">Carlson Software</div>
-                  </td>
-               </tr>
-               <tr>
-                  <td class="job-experience-content">
-                     <h3 class="job-experience-title">Medical Imaging/Machine Learning Research Assistant</h3>
-                     <div class="job-experience-company">University of Kentucky</div>
-                  </td>
-                  <td class="job-experience-date">January 2023 - January 2024</td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td></td>
-                  <td class="job-experience-date">August 2022 - May 2024</td>
-                  <td class="job-experience-content">
-                     <h3 class="job-experience-title">Nuclear Physics Research Assistant</h3>
-                     <div class="job-experience-company">University of Kentucky</div>
-                  </td>
-               </tr>
-               <tr>
-                  <td class="job-experience-content">
-                     <h3 class="job-experience-title">Computer Engineering Intern</h3>
-                     <div class="job-experience-company">Infineon Technologies</div>
-                  </td>
-                  <td class="job-experience-date">May 2023 - August 2023</td>
-                  <td></td>
-               </tr>
-               <tr>
-                  <td></td>
-                  <td class="job-experience-date">May 2022 - August 2022</td>
-                  <td class="job-experience-content">
-                     <h3 class="job-experience-title">Engineering and Technology Intern</h3>
-                     <div class="job-experience-company">Lockheed Martin</div>
-                  </td>
-               </tr>
-            </table>
-         </section>
-         <section id="projects">
-            <h1 class="section-header">Projects</h1>
-            <div class="portfolio">
-               <div class="project-item" onclick="showPopup('PolyCL: Context-Aware Contrastive Learning for Image Segmentation', 
-               'A novel contrastive learning framework using an example selection strategy leveraging whether slices contain the target organ and to which CT scan each slice belongs. This framework has shown to improve over supervised baseline models and the popular contrastive learning strategy SimCLR. <br> <br> This project was published as a 4-page paper to ISBI 2024 and presented as a poster at the 2023 Commonwealth Computational Summit. <br> <br> All work was done in Python using PyTorch.', 
-               ['&#129095; Poster', '&#129095; Paper', '&#129095; Second Paper', 'Github'], ['AaronMoseleyCCSPoster.pptx', 'PolyCLPaper.pdf', 'https://arxiv.org/pdf/2505.19208', 'https://github.com/AaronMoseley/CTLiverSegmentation'], [true, true, true, false])">
-                  <div class="project-background">
-                     <img class="project-image" src="PolyCL.png" alt="PolyCL">
-                  </div>
-                  <div class="project-title">PolyCL: Contrastive Learning Framework</div>
-               </div>
-               <div class="project-item" onclick="showPopup('HyPhy - Skeletonization Research Tool', 
-               'A tool created for biology researchers dealing with fungi that need to transform raw images into skeletons to analyze structural features. This tool is fully open-source and modular so that any user can modify and update skeletonization pipelines or their parameters. <br> <br> The tool contains modes for selecting certain line segments and clusters to view information about them or add notes on them, comparing against externally-generated skeletons, analyzing each step of the skeletonization process with modifiable parameters, and more. <br> <br> Additionally, I have created a demo YouTube video that explains how to use and adapt this tool to fit the purposes of any researcher. <br> <br> Multiple papers are in progress that make heavy use of this tool. When they are complete, they will also be linked here.', 
-               ['Paper', 'Github', 'Demo Video'], ['https://www.biorxiv.org/content/10.1101/2025.09.11.675604v1', 'https://github.com/AaronMoseley/SkeletonizationTool', 'https://youtu.be/fFXoH72r6VE'], [false, false, false])">
-                  <div class="project-background">
-                     <img class="project-image" src="HyPhy.png" alt="CMU-Net">
-                  </div>
-                  <div class="project-title">HyPhy</div>
-               </div>
-               <div class="project-item" onclick="showPopup('Vulkan Dynamic Lighting Demo', 
-               'A dynamic lighting demo and modular instance renderer created with C++ using Vulkan and Vulkan Memory Allocator. <br> <br> This demo allows the user to add and remove objects while moving with a first-person camera. A light source rotates around the scene and shows the user the effect of the Blinn-Phong lighting algorithm, implemented in HLSL. <br> <br> Currently, the scene generates cubes and tetrahedrons. But, given the vertex positions, normals, and an index buffer, and other simple object could be easily added as an inherited class of my custom RenderObject class.', 
-               ['Github'], ['https://github.com/AaronMoseley/VulkanDynamicLighting'], [false])">
-                  <div class="project-background">
-                     <img class="project-image" src="LightingDemoImage.png" alt="Vulkan Lighting Demo">
-                  </div>
-                  <div class="project-title">Vulkan Dynamic Lighting Demo</div>
-               </div>
-               <div class="project-item" onclick="showPopup('Shoulder-Mounted Space Program', 
-               'Shoulder-Mounted Space Program is a long-term game project featuring a custom realistic gravity simulation. This game was released on Steam on December 17, 2025. <br> <br> In Shoulder-Mounted Space Program, you launch yourself from planet to planet using a rocket launcher as your only form of movement. You do your best to explore hostile regions of space while robotic enemies try to stop you. <br> <br> With two unique game modes, 15 levels where each introduces a new mechanic/enemy, and a final boss fight, Shoulder-Mounted Space Program provides a large amount of variety given its simple concept. <br> <br> To get this game ready for release, I coordinated a small group of playtesters, artists, and a composer while being the sole developer. <br> <br> Shoulder-Mounted Space Program was developed in Unity with C#.', 
-               ['Website', 'Steam Page', 'Trailer'], ['http://www.shouldermountedspaceprogram.com', 'https://store.steampowered.com/app/3939880/ShoulderMounted_Space_Program/', 'https://youtu.be/O0Mt6V5I63w'], [false, false, false])">
-                  <div class="project-background">
-                     <img class="project-image" src="Shoulder-MountedSpaceProgram.png" alt="Shoulder-Mounted Space Program">
-                  </div>
-                  <div class="project-title">Shoulder-Mounted Space Program</div>
-               </div>
-               <div class="project-item" onclick="showPopup('CMU-Net: Context-Aware Multitasking for Medical Image Segmentation', 
-               'An innovative multitasking strategy for medical image segmentation leveraging image-level labels that enable a secondary task of organ detection. By combining the training of the encoder of the U-Net model on organ detection with the entire model\'s training on image segmentation, we found significant benefits over baseline models trained solely on segmentation. <br> <br> This project was given as an oral presentation at the University of Kentucky\'s 5 Minute Fast Track undergraduate research event. <br> <br> All work was done in Python using PyTorch.', 
-               ['&#129095; Paper', '&#129095; Presentation Slide'], ['ContextAwareMultitasking.pdf', 'CMU-Net5MinuteFastTrack.pdf'], [true, true])">
-                  <div class="project-background">
-                     <img class="project-image" src="CMU-Net.png" alt="CMU-Net">
-                  </div>
-                  <div class="project-title">CMU-Net: Multitasking for Image Segmentation</div>
-               </div>
-               <div class="project-item" onclick="showPopup('Trencher', 
-               'A 2D roguelike I created over one week for the Big Mode 2025 game jam. The game jam theme was \'Power\', so the game focuses on building underground powerlines between houses after an earthquake damaged your city\'s infrastructure. <br> <br> As you dig, you use your wits and some helpful buildings to keep away monsters that try to destroy what you\'ve built. After completing each level, you can upgrade your equipment with your progress saving in between sessions. <br> <br> Trencher features a fully destructible world, randomly generated terrain and ruins, and a full mining and crafting system.', 
-               ['Game Page', 'Devlog'], ['https://aaronmoseley.itch.io/trencher', 'https://www.youtube.com/watch?v=28QkQmtjQcc'], [false, false])">
-                  <div class="project-background">
-                     <img class="project-image" src="Trencher.png" alt="Trencher">
-                  </div>
-                  <div class="project-title">Trencher</div>
-               </div>
-               <div class="project-item" onclick="showPopup('Helmeteers', 
-               'A real-time strategy game built for the Winter Melon Jam 2024 over three days. I collaborated with my friend Thomas to build this project and it placed in the top 10 games in the jam overall! <br> <br> In the game, you attempt to take control of a planet on behalf of your employer who desires the resource Neverfindium that is located there. It features a building-placement system, individual unit pathfinding using A*, and an intelligent enemy AI that will attempt to prevent your conquest. <br> <br> In addition, I created a devlog linked below that talks about the different parts of the game in more detail.', 
-               ['Game Page', 'Devlog'], ['https://aaronmoseley.itch.io/helmeteers', 'https://www.youtube.com/watch?v=QQquMjs9GbM'], [false, false])">
-                  <div class="project-background">
-                     <img class="project-image" src="HelmeteersPic.png" alt="Helmeteers">
-                  </div>
-                  <div class="project-title">Helmeteers</div>
-               </div>
-               <div class="project-item" onclick="showPopup('NOPTREX Readout Software/Firmware', 
-               'Presented at NCUR 2023 and APS April Meeting 2023. </br> </br> A multi-channel readout software and digitizer firmware for the Neutron Optics Parity and Time-Reversal Experiment (NOPTREX).  The experiment is investigating time-reversal violations in low-energy neutron reactions by monitoring the levels of gamma radiation emitted after the collision of an accelerated neutron with a heavy target. Through this, we hope to be able to explain the Baryon Asymmetry of the early universe. </br> </br> This readout software was developed in C++ using the ROOT framework. It communicates in real time with custom firmware on a CAEN DT5560SE digitizer. It has already been successfully tested on a particle accelerator at the J-PARC (Japan Proton Accelerator Research Complex) campus and the Los Alamos National Lab. <br> <br> A research paper covering this project is currently in progress and will be added here when complete.', 
-               ['&#129095; Poster'], ['NOPTREXPoster.pdf'], [true])">
-                  <div class="project-background">
-                     <img class="project-image" src="NOPTREX.png" alt="NOPTREX Software">
-                  </div>
-                  <div class="project-title">NOPTREX Readout Software/Firmware</div>
-               </div>
-               <div class="project-item" onclick="showPopup('Deep State-Value Estimation for Long-Term Planning', 
-               'A novel reinforcement learning approach for long-term planning tasks that combines deep image analysis models with traditional tree-search algorithms. When training on strategy games, most state-of-the-art reinforcement learning approaches rely entirely on self-play or learning from human strategies. But, self-play leads to early versions of models making entirely random moves and takes longer to train while many tasks that require reinforcement learning don\'t have established human strategies to use when training models. This new approach, dubbed Deep-State Learning, introduces simple opponents that use hard-coded tree-search algorithms at the beginning of the training process. Later in training, the opponents alternate between mutated self-play and these simple opponents. This strategy allows the model to initially learn intelligent but simple strategies before switching to self-play, reducing the random moves inherent to early models trained with self-play. <br> <br> An experimental analysis on a custom generic strategy game shows that Deep-State Learning performs better than traditional tree-search algorithms and models trained on self-play by up to 10%. <br> <br> This work was completed as my thesis for the University of Kentucky\'s Lewis Honors College under Dr. Jerzy Jaromczyk and Dr. Neil Moore. This project was developed in Python using PyTorch.', 
-               ['Github'], ['https://github.com/AaronMoseley/HON491-DSL/tree/main'], [false])">
-                  <div class="project-background">
-                     <img class="project-image" src="DeepStateValueEstimation.png" alt="Deep State-Value Estimation">
-                  </div>
-                  <div class="project-title">Deep State-Value Estimation for Long-Term Planning</div>
-               </div>
-               <div class="project-item" onclick="showPopup('Hydraulic Erosion Simulation', 
-               'This demo realistically simulates hydraulic erosion on user-defined or procedurally generated terrain. It allows the user to customize both the initial terrain and the erosion process to create unique features. </br> </br> It uses Perlin Noise algorithm to randomly generate initial terrain and visualizes gradual erosion in real-time, creating a report detailing its effects. </br> </br> Press H to hide all UI elements, press G to hide all tips. </br> </br> Developed in Unity using C#.', 
-               ['&#129095; Download', 'Github'], ['HydraulicErosion.zip', 'https://github.com/AaronMoseley/HydraulicErosion'], [true, false])">
-                  <div class="project-background">
-                     <img class="project-image" src="ErosionSim.png" alt="Hydraulic Erosion Simulator">
-                  </div>
-                  <div class="project-title">Hydraulic Erosion Simulation</div>
-               </div>
-               <div class="project-item" onclick="showPopup('Phantom Mansion - MLH Hackathon 1st Place Winner', 
-               'Won 1st place at CatHacks VIII Hackathon. Presented at the University of Kentucky\'s E-Day 2023. </br> </br> A haunted house roguelike game with the goal of finding treasure at the top of a ghost-infested house. Multiple difficulty levels are available and high scores are saved for multiple players. All levels are randomly generated using randomized depth-first search and enemy AI is implemented using breadth-first-search. </br> </br> Developed in C#.', 
-               ['&#129095; Download', 'Github', 'Hackathon Submission'], ['PhantomMansion.zip', 'https://github.com/AaronMoseley/CatHacks8', 'https://devpost.com/software/phantom-mansion'], [true, false, false])">
-                  <div class="project-background">
-                     <img class="project-image" src="PhantomMansion.png" alt="Phantom Mansion">
-                  </div>
-                  <div class="project-title">Phantom Mansion - MLH 1st Overall</div>
-               </div>
-               <div class="project-item" onclick="showPopup('Pixel Plunge', 
-               'A fully-featured 2D platformer with multiple novel game mechanics, including advanced player movement, a grappling hook, and challenging puzzles. Implements and standardizes quality-of-life features such as save states and user-modifiable controls in Unity. Includes multiple levels, varied enemies, and a boss fight. </br> </br> The tech demo incorporates more gameplay mechanics including advanced enemy AI using A* pathfinding, an inventory system, a health system, and NPCs with dialogue. </br> </br> Developed in Unity using C#.', 
-               ['&#129095; Full Game', '&#129095; Tech Demo', 'Github'], ['PixelPlunge.zip', 'PlatformerTechDemo.zip', 'https://github.com/AaronMoseley/Platformer'], [true, true, false])">
-                  <div class="project-background">
-                     <img class="project-image" src="Platformer.png" alt="Pixel Plunge">
-                  </div>
-                  <div class="project-title">Pixel Plunge</div>
-               </div>
-            </div>
-            <div class="popup" id="popup" onclick="closePopup(event)">
-               <div class="popup-content">
-                  <h2 id="popup-title" class="project-details"></h2>
-                  <p id="popup-description" class="project-details"></p>
-                  <div id="download-buttons" class="project-details">
-                     <!-- Download buttons will be dynamically generated here -->
-                  </div>
-               </div>
-            </div>
-         </section>
-      </main>
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-      <script>
-         function showPopup(title, description, buttons, links, isDownload) {
-            document.getElementById("popup-title").textContent = title;
-            document.getElementById("popup-description").innerHTML = description;
-            const downloadButtons = document.getElementById("download-buttons");
-            
-            // Clear any existing buttons
-            downloadButtons.innerHTML = "";
 
-            // Generate buttons based on the provided array
-            buttons.forEach((buttonLabel, index) => {
-                if(screen.width < 767 && isDownload[index])
-                  return;
-               
-                const button = document.createElement("a");
-                button.target = 'blank';
-                button.href = links[index]; // Replace with the appropriate link
-                button.className = "download-button";
-                button.textContent = buttonLabel;
-                downloadButtons.appendChild(button);
-            });
-         
-            document.getElementById("popup").style.display = "block";
-         }
-         
-         function closePopup(event) {
-            if (event.target === document.getElementById("popup")) {
-                document.getElementById("popup").style.display = "none";
-            }
-         }
-         
-         if(screen.width > 767)
-          {
-            window.onload = function () {
-               //Create a new instance of the application
-               const application = new Application();
-            
-               //Initialize the CircleContainer objects
-               application.initializeCircleContainers();
-            
-               //Start the initial loop function for the first time
-               application.loop();
-            };
-          } else {
-           document.getElementById("canvas").style = "background-color: transparent;";
-         
-           document.querySelectorAll(".download-button").forEach((button) => {
-               button.style.display = "none";
-            });
-          }
-         
-         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-             anchor.addEventListener('click', function (e) {
-                 e.preventDefault();
-         
-                 document.querySelector(this.getAttribute('href')).scrollIntoView({
-                     behavior: 'smooth'
-                 });
-             });
-         });
-         
-         const navbar = document.querySelector('#navbar');
-         const position = 100;
-         
-         window.addEventListener('scroll', () => {
-           if (window.scrollY > position) {
-             navbar.classList.add('navbar-small');
-           } else {
-             navbar.classList.remove('navbar-small');
-           }
-         });
-         
-         /**
-          * Constants
-          */
-         const TWO_PI = Math.PI * 2;
-         
-         /**
-          * Application Class
-          */
-         class Application {
-             /**
-              * Application constructor
-              */
-             constructor() {
-                 this.canvas = document.getElementById("canvas");
-                 this.context = this.canvas.getContext("2d");
-                 this.width = this.canvas.width = window.innerWidth;
-                 this.height = this.canvas.height = window.innerHeight;
-                 this.center = {
-                     x: this.width / 2,
-                     y: this.height / 2
-                 };
-         
-                 this.circleContainers = [];
-         
-                 //Resize listener for the canvas to fill browser window dynamically
-                 window.addEventListener('resize', () => this.resizeCanvas(), false);
-             }
-         
-             /**
-              * Simple resize function. Reinitializes everything on the canvas while changing the width/height
-              */
-             resizeCanvas() {
-                 this.width = this.canvas.width = window.innerWidth;
-                 this.height = this.canvas.height = window.innerHeight;
-                 this.center = {
-                     x: this.width / 2,
-                     y: this.height / 2
-                 };
-         
-                 //Empty the previous container and fill it again with new CircleContainer objects
-                 this.circleContainers = [];
-                 this.initializeCircleContainers();
-             }
-         
-             /**
-              * Create a number of CircleContainer objects based on the numberOfContainers variable
-              * @return void
-              */
-             initializeCircleContainers() {
-                 for (let x = 0; x < this.width + 100; x += 100) {
-                     for (let y = 0; y < this.height + 100; y += 100) {
-                         //Initialize a new instance of the CircleContainer class
-                         let circleContainer = new CircleContainer(this.context, x, y);
-         
-                         //Let the CircleContainer initialize it's children
-                         circleContainer.initializeCircles();
-         
-                         //Add the container to our array of CircleContainer objects
-                         this.circleContainers.push(circleContainer);
-                     }
-                 }
-             }
-         
-             /**
-              * Updates the application and every child of the application
-              * @return void
-              */
-             update() {
-                 for (let i = 0; i < this.circleContainers.length; i++) {
-                     this.circleContainers[i].update();
-                 }
-             }
-         
-             /**
-              * Renders the application and every child of the application
-              * @return void
-              */
-             render() {
-                 //Clear the entire canvas every render
-                 this.context.clearRect(0, 0, this.width, this.height);
-         
-                 //Trigger the render function on every child element
-                 for (let i = 0; i < this.circleContainers.length; i++) {
-                     this.circleContainers[i].render();
-                 }
-             }
-         
-             /**
-              * Update and render the application at least 60 times a second
-              * @return void
-              */
-             loop() {
-                 if(screen.width > 767)
-                 {
-                   this.update();
-                   this.render();
-                   document.querySelector("#canvas").style.backgroundColor = "#f2f2f2";
-                 } else {
-                   document.querySelector("#canvas").style.backgroundColor = "transparent";
-                 }
-         
-                 window.requestAnimationFrame(() => this.loop());
-             }
-         }
-         
-         /**
-          * CircleContainer Class
-          */
-         class CircleContainer {
-             /**
-              * CircleContainer constructor
-              * @param context - The context from the canvas object of the Application
-              * @param x
-              * @param y
-              */
-             constructor(context, x, y) {
-                 this.context = context;
-                 this.position = {x, y};
-         
-                 this.numberOfCircles = 12;
-                 this.circles = [];
-         
-                 this.baseRadius = 20;
-                 this.bounceRadius = 200;
-                 this.singleSlice = TWO_PI / this.numberOfCircles;
-             }
-         
-             /**
-              * Create a number of Circle objects based on the numberOfCircles variable
-              * @return void
-              */
-             initializeCircles() {
-                 for (let i = 0; i < this.numberOfCircles; i++) {
-                     this.circles.push(new Circle(this.position.x, this.position.y + Math.random(), this.baseRadius, this.bounceRadius, i * this.singleSlice));
-                 }
-             }
-         
-             /**
-              * Try to update the application at least 60 times a second
-              * @return void
-              */
-             update() {
-                 for (let i = 0; i < this.numberOfCircles; i++) {
-                     this.circles[i].update(this.context);
-                 }
-             }
-         
-             /**
-              * Try to render the application at least 60 times a second
-              * @return void
-              */
-             render() {
-                 for (let i = 0; i < this.numberOfCircles; i++) {
-                     this.circles[i].render(this.context);
-                 }
-             }
-         }
-         
-         /**
-          * Circle Class
-          */
-         class Circle {
-             /**
-              * Circle constructor
-              * @param x - The horizontal position of this circle
-              * @param y - The vertical position of this circle
-              * @param baseRadius
-              * @param bounceRadius
-              * @param angleCircle
-              */
-             constructor(x, y, baseRadius, bounceRadius, angleCircle) {
-                 this.basePosition = {x, y};
-                 this.position = {x, y};
-                 this.speed = 0.001;
-                 this.baseSize = 20;
-                 this.size = 10;
-                 this.angle = (x + y);
-                 this.baseRadius = baseRadius;
-                 this.bounceRadius = bounceRadius;
-                 this.angleCircle = angleCircle;
-             }
-         
-             /**
-              * Update the position of this object
-              * @return void
-              */
-             update() {
-         
-               var height = 0.85 * screen.height;
-         
-         	  var cutoffY = height;
-         	  var maxSize = 40;
-         
-         	  this.position.x = this.basePosition.x + Math.cos(this.angleCircle) * (Math.sin(this.angle + this.angleCircle) * this.bounceRadius + this.baseRadius);
-                 this.position.y = this.basePosition.y + Math.sin(this.angleCircle) * (Math.sin(this.angle + this.angleCircle) * this.bounceRadius + this.baseRadius);
-                 this.size = (Math.cos(this.angle) * 8) + this.baseSize;
-         
-         	  this.size = (1 - Math.max(0, Math.min(this.position.y, cutoffY) / cutoffY)) * this.size;
-         
-                 this.angle += this.speed;
-             }
-         
-             /**
-              * Renders this Circle object on the canvas
-              * @param context - The context from the canvas object of the Application
-              * @return void
-              */
-             render(context) {
-                 context.fillStyle = "hsl(0, 0%, "+((this.size * 2) + 60)+"%)";
-                 context.beginPath();
-                 context.arc(this.position.x, this.position.y, this.size, 0, TWO_PI);
-                 context.fill();
-             }
-         }
-         
-         /**
-          * Onload function is executed whenever the page is done loading, initializes the application
-          */
-      </script>
-   </body>
+      <div class="post-cover" id="post-cover"></div>
+
+      <article class="post-body" id="post-body">
+        <!-- post-links injected here by renderer if present -->
+      </article>
+
+      <div class="post-footer">
+        <div class="post-footer-tags" id="post-footer-tags"></div>
+        <button class="post-footer-back" onclick="app.showHome()">← Back</button>
+      </div>
+
+      <div class="related-posts" id="related-posts" style="display:none;">
+        <h3 class="related-posts-heading">Related Posts</h3>
+        <div class="related-posts-grid" id="related-posts-grid"></div>
+      </div>
+
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span class="footer-name" id="footer-name-post">Your Name</span>
+        <div class="footer-links">
+          <a href="#" id="footer-email-post">Email</a>
+          <a href="#" id="footer-linkedin-post" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="#" id="footer-github-post" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /page-post -->
+
+</div><!-- /app -->
+
+<script type="module" src="js/app.js"></script>
+</body>
 </html>

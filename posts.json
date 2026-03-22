@@ -1,0 +1,211 @@
+{
+  "site": {
+    "title": "Aaron Moseley",
+    "author": "Aaron Moseley",
+    "tagline": "",
+    "cv":     "docs/AaronMoseleyCV.pdf",
+    "resume": "docs/AaronMoseleyResume.pdf",
+    "social": {
+      "email": "amoseley018@protonmail.com",
+      "linkedin": "https://www.linkedin.com/in/aaron-moseley/",
+      "github": "https://github.com/AaronMoseley"
+    }
+  },
+  "posts": [
+    {
+        "slug": "polycl-journal",
+        "file": "posts/polycl-journal.md",
+        "cover": "images/PolyCL.png",
+        "tab": "Updates",
+        "links": [
+          {"label": "Paper", "url": "https://www.melba-journal.org/pdf/2026:002.pdf"}
+        ],
+        "related": ["polycl-isbi", "ml-research-assistant"]
+    },
+    {
+        "slug": "skelpy",
+        "file": "posts/skelpy.md",
+        "cover": "images/SkelPy.png",
+        "tab": "Projects",
+        "links": [
+          {"label": "Paper", "url": "https://www.biorxiv.org/content/10.1101/2025.09.11.675604v1"},
+          {"label": "Github", "url": "https://github.com/AaronMoseley/SkelPy"},
+          {"label": "Demo Video", "url": "https://youtu.be/fFXoH72r6VE"}
+        ],
+        "related": []
+    },
+    {
+        "slug": "volt-engine",
+        "file": "posts/volt-engine.md",
+        "cover": "images/VoltEngine.png",
+        "tab": "Projects",
+        "links": [
+          {"label": "Github", "url": "https://github.com/AaronMoseley/VoltEngine"}
+        ],
+        "related": []
+    },
+    {
+        "slug": "shoulder-mounted-space-program",
+        "file": "posts/shoulder-mounted-space-program.md",
+        "cover": "images/ShoulderMountedSpaceProgram.png",
+        "tab": "Projects",
+        "links": [
+          {"label": "Website", "url": "http://www.shouldermountedspaceprogram.com/"},
+          {"label": "Steam Page", "url": "https://store.steampowered.com/app/3939880/ShoulderMounted_Space_Program/"},
+          {"label": "Trailer", "url": "https://youtu.be/O0Mt6V5I63w"}
+        ],
+        "related": []
+    },
+    {
+        "slug": "trencher",
+        "file": "posts/trencher.md",
+        "cover": "images/Trencher.png",
+        "tab": "Projects",
+        "links": [
+          {"label": "Game Page", "url": "https://aaronmoseley.itch.io/trencher"},
+          {"label": "Devlog", "url": "https://www.youtube.com/watch?v=28QkQmtjQcc"}
+        ],
+        "related": []
+    },
+    {
+        "slug": "helmeteers",
+        "file": "posts/helmeteers.md",
+        "cover": "images/Helmeteers.png",
+        "tab": "Projects",
+        "links": [
+          {"label": "Game Page", "url": "https://aaronmoseley.itch.io/helmeteers"},
+          {"label": "Devlog", "url": "https://www.youtube.com/watch?v=QQquMjs9GbM"}
+        ],
+        "related": []
+    },
+    {
+        "slug": "ml-engineer-carlson",
+        "file": "posts/ml-engineer-carlson.md",
+        "cover": "images/CarlsonLogo.png",
+        "tab": "Updates",
+        "links": [],
+        "related": ["carlson-intern"]
+    },
+    {
+        "slug": "carlson-intern",
+        "file": "posts/carlson-intern.md",
+        "cover": "images/CarlsonLogo.png",
+        "tab": "Updates",
+        "links": [],
+        "related": ["ml-engineer-carlson", "lockheed-martin-intern", "infineon-intern"]
+    },
+    {
+        "slug": "undergrad-graduation",
+        "file": "posts/undergrad-graduation.md",
+        "cover": "images/UKLogo.png",
+        "tab": "Updates",
+        "links": [],
+        "related": []
+    },
+    {
+        "slug": "deep-state-value-estimation",
+        "file": "posts/deep-state-value-estimation.md",
+        "cover": "images/DeepStateValueEstimation.png",
+        "tab": "Project",
+        "links": [
+          {"label": "Github", "url": "https://github.com/AaronMoseley/HON491-DSL"}
+        ],
+        "related": []
+    },
+    {
+        "slug": "academic-achievement-award",
+        "file": "posts/academic-achievement-award.md",
+        "cover": "images/UKLogo.png",
+        "tab": "Updates",
+        "links": [],
+        "related": []
+    },
+    {
+        "slug": "polycl-isbi",
+        "file": "posts/polycl-isbi.md",
+        "cover": "images/PolyCL.png",
+        "tab": "Projects",
+        "links": [
+          {"label": "Poster", "url": "downloads/PolyCLPoster.pptx"},
+          {"label": "Paper", "url": "downloads/PolyCLPaper.pdf"},
+          {"label": "Github", "url": "https://github.com/AaronMoseley/CTLiverSegmentation"}
+        ],
+        "related": ["ml-research-assistant", "polycl-journal"]
+    },
+    {
+        "slug": "cmu-net",
+        "file": "posts/cmu-net.md",
+        "cover": "images/CMU-Net.png",
+        "tab": "Projects",
+        "links": [
+          {"label": "Presentation Slide", "url": "downloads/CMU-Net5MinuteFastTrack.pdf"},
+          {"label": "Paper", "url": "downloads/ContextAwareMultitasking.pdf"},
+          {"label": "Github", "url": "https://github.com/AaronMoseley/CTLiverSegmentation"}
+        ],
+        "related": ["ml-research-assistant"]
+    },
+    {
+        "slug": "undergrad-research-fellow",
+        "file": "posts/undergrad-research-fellow.md",
+        "cover": "images/UKLogo.png",
+        "tab": "Updates",
+        "links": [],
+        "related": ["ml-research-assistant"]
+    },
+    {
+        "slug": "infineon-intern",
+        "file": "posts/infineon-intern.md",
+        "cover": "images/InfineonLogo.png",
+        "tab": "Updates",
+        "links": [],
+        "related": ["lockheed-martin-intern", "carlson-intern"]
+    },
+    {
+        "slug": "readout-software",
+        "file": "posts/readout-software.md",
+        "cover": "images/NOPTREX.png",
+        "tab": "Projects",
+        "links": [
+          {"label": "Poster", "url": "downloads/NOPTREXPoster.pdf"},
+          {"label": "Github", "url": "https://github.com/AaronMoseley/NOPTREXSoftware"}
+        ],
+        "related": ["physics-research-assistant"]
+    },
+    {
+        "slug": "ml-research-assistant",
+        "file": "posts/ml-research-assistant.md",
+        "cover": "images/UKLogo.png",
+        "tab": "Updates",
+        "links": [],
+        "related": ["polycl-isbi", "polycl-journal", "physics-research-assistant"]
+    },
+    {
+        "slug": "physics-research-assistant",
+        "file": "posts/physics-research-assistant.md",
+        "cover": "images/UKLogo.png",
+        "tab": "Updates",
+        "links": [],
+        "related": ["readout-software", "ml-research-assistant"]
+    },
+    {
+        "slug": "lockheed-martin-intern",
+        "file": "posts/lockheed-martin-intern.md",
+        "cover": "images/LockheedMartinLogo.png",
+        "tab": "Updates",
+        "links": [],
+        "related": ["infineon-intern", "carlson-intern"]
+    },
+    {
+      "slug": "phantom-mansion",
+      "file": "posts/phantom-mansion.md",
+      "cover": "images/PhantomMansion.png",
+      "tab": "Projects",
+      "links": [
+        { "label": "Download", "url": "downloads/PhantomMansion.zip" },
+        { "label": "Github",     "url": "https://github.com/AaronMoseley/CatHacks8" },
+        { "label": "Hackathon Submission",  "url": "https://devpost.com/software/phantom-mansion" }
+      ],
+      "related": []
+    }
+  ]
+}
