@@ -1,7 +1,7 @@
 ---
 title: SkelPy: Open-Source Skeletonization Tool
 date: 02-02-2026
-tags: Research, Publication, Python
+tags: Research, Publications, Python
 ---
 
 I've released SkelPy, a free and open-source tool created for biology researchers dealing with fungi that need to transform raw images into skeletons to analyze structural features. This tool is fully modular so that any user can add, remove, or modify the skeletonization pipelines or their parameters.

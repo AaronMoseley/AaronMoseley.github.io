@@ -1,7 +1,7 @@
 ---
 title: NOPTREX Data Acquisition System
 date: 04-18-2023
-tags: Research, Publication, C++
+tags: Research, Publications, C++
 ---
 
 I've created a multi-channel digitizer firmware and C++-based readout software for the Neutron Optics Parity and Time-Reversal Experiment (NOPTREX). I presented this project at the National Conference on Undergraduate Research and the American Physical Society.

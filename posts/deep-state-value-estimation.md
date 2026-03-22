@@ -1,7 +1,7 @@
 ---
 title: Deep State-Value Estimation for Long-Term Planning
 date: 04-28-2024
-tags: Research, Machine Learning, Python
+tags: Research, Machine Learning, Python, PyTorch
 ---
 
 I've completed my thesis for the Lewis Honors College at the University of Kentucky: Deep State-Value Estimation for Long-Term Planning.
