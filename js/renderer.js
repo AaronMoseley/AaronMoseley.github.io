@@ -56,7 +56,7 @@ export class Renderer {
     if (docsEl) {
       const links = [];
       if (site.cv)     links.push({ label: 'View CV',     href: site.cv });
-      if (site.resume) links.push({ label: 'View Resumé', href: site.resume });
+      if (site.resume) links.push({ label: 'View Résumé', href: site.resume });
       if (links.length) {
         docsEl.innerHTML = links.map(l =>
           `<a class="about-doc-btn" href="${l.href}" target="_blank" rel="noopener">${l.label}
