@@ -25,7 +25,7 @@
     {
         "slug": "skelpy",
         "file": "posts/skelpy.md",
-        "cover": "images/SkelPy.png",
+        "cover": "images/SkelPy.jpg",
         "tab": "Projects",
         "links": [
           {"label": "Paper", "url": "https://www.biorxiv.org/content/10.1101/2025.09.11.675604v1"},
