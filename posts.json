@@ -28,7 +28,7 @@
         "cover": "images/SkelPy.jpg",
         "tab": "Projects",
         "links": [
-          {"label": "Paper", "url": "https://www.biorxiv.org/content/10.1101/2025.09.11.675604v1"},
+          {"label": "Paper", "url": "https://bsapubs.onlinelibrary.wiley.com/doi/10.1002/aps3.70049"},
           {"label": "Github", "url": "https://github.com/AaronMoseley/SkelPy"},
           {"label": "Demo Video", "url": "https://youtu.be/fFXoH72r6VE"}
         ],
