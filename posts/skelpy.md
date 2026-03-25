@@ -10,4 +10,4 @@ The tool contains modes for selecting certain line segments and clusters to view
 
 Additionally, I have created a demo YouTube video that explains how to use and adapt this tool to fit the purposes of any researcher.
 
-Multiple papers are in progress that make heavy use of this tool. When they are complete, they will also be linked here.
+A paper covering this project and its possible applications for research groups in the bioinformatics space has been published in the journal "Applications in Plant Sciences". It is linked below.
