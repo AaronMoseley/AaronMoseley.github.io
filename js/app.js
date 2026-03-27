@@ -4,9 +4,10 @@ import { Controls }   from './controls.js';
 
 /**
  * App
- * Top-level orchestrator. Wires together the store, renderer, and
- * controls, and exposes the public methods called from inline HTML
- * event handlers (showHome, showPost).
+ * Top-level orchestrator for index.html (home page only).
+ * Clicking a post card navigates to post.html?slug=<slug>,
+ * which is a fully separate page. The browser's back button
+ * returns here naturally.
  */
 class App {
 
@@ -17,18 +18,10 @@ class App {
       onFilterChange: (tab, tag) => this._onFilterChange(tab, tag),
     });
 
-    /** Number of posts shown per page before pagination kicks in */
     this.POSTS_PER_PAGE = 9;
-
-    /** @type {number} Current page (1-indexed) */
     this._currentPage = 1;
   }
 
-  // ── Lifecycle ────────────────────────────────────────────────────
-
-  /**
-   * Entry point. Loads data, renders the home page, and reveals the app.
-   */
   async init() {
     try {
       await this.store.load();
@@ -44,9 +37,6 @@ class App {
     }
   }
 
-  /**
-   * Populates all home-page content from store data.
-   */
   _renderHome() {
     const { site, posts } = this.store.siteData;
 
@@ -66,45 +56,14 @@ class App {
     );
   }
 
-  // ── Routing ──────────────────────────────────────────────────────
-
   /**
-   * Shows the named page and scrolls to the top.
-   *
-   * @param {'home'|'post'} pageId
+   * Navigates to post.html?slug=<slug>.
+   * Real page navigation — browser back button returns to index.html.
    */
-  showPage(pageId) {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    document.getElementById(`page-${pageId}`).classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'instant' });
+  showPost(slug) {
+    window.location.href = `post.html?slug=${encodeURIComponent(slug)}`;
   }
 
-  /** Navigates to the home page. */
-  showHome() {
-    document.title = this.store.siteData?.site?.author || this.store.siteData?.site?.title || document.title;
-    this.showPage('home');
-  }
-
-  /**
-   * Navigates to the single-post page for the given slug.
-   *
-   * @param {string} slug
-   */
-  async showPost(slug) {
-    if (!this.store.siteData) return;
-    const siteAuthor = this.store.siteData.site.author || this.store.siteData.site.title;
-    const ok = await this.renderer.renderPost(slug, siteAuthor);
-    if (ok) this.showPage('post');
-  }
-
-  // ── Filter Callback ──────────────────────────────────────────────
-
-  /**
-   * Re-renders the grid whenever tabs or tags change.
-   *
-   * @param {string} tab
-   * @param {string} tag
-   */
   _onFilterChange(tab, tag) {
     this._currentPage = 1;
     this.renderer.renderGrid(
@@ -114,11 +73,6 @@ class App {
     );
   }
 
-  /**
-   * Handles pagination page changes.
-   *
-   * @param {number} page
-   */
   _onPageChange(page) {
     this._currentPage = page;
     this.renderer.renderGrid(
@@ -129,14 +83,8 @@ class App {
       p => this._onPageChange(p),
     );
   }
-
 }
 
-// ── Bootstrap ────────────────────────────────────────────────────────────────
-
 const app = new App();
-
-// Expose app globally so inline onclick="app.showHome()" etc. work.
 window.app = app;
-
 app.init();
