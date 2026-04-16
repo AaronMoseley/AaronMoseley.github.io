@@ -127,7 +127,7 @@
         "tab": "Projects",
         "links": [
           {"label": "Poster", "url": "downloads/PolyCLPoster.pptx"},
-          {"label": "Paper", "url": "downloads/PolyCLPaper.pdf"},
+          {"label": "Paper", "url": "https://ieeexplore.ieee.org/abstract/document/10635698"},
           {"label": "Github", "url": "https://github.com/AaronMoseley/CTLiverSegmentation"}
         ],
         "related": ["ml-research-assistant", "polycl-journal"]
