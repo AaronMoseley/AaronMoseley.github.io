@@ -6,14 +6,12 @@
   <title>Aaron Moseley</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
 <div id="app">
-
-  <!-- ── HOME PAGE ──────────────────────────────────────────────── -->
   <div id="page-home" class="page active">
 
     <!-- About / Hero -->
@@ -23,7 +21,8 @@
           <img class="about-photo" src="images/AaronMoseleyPicture.jpeg" alt="Aaron Moseley Photo" />
         </div>
         <div class="about-text">
-          <h2 class="about-name" id="about-name">Your Name</h2>
+          <h1 class="about-name" id="about-name">Aaron Moseley</h1>
+          <div class="about-divider"></div>
           <div class="about-bio" id="about-bio">
             <p>
               I'm a machine learning engineer at Carlson Software and graduated <i>summa cum laude</i> from the University of Kentucky in May 2024. While in school, I was a member of the Lewis Honors College and double-majored in Computer Science and Mathematics.
@@ -39,41 +38,48 @@
               I also spent four semesters as a teaching assistant and grader at the University of Kentucky where I graded assignments and instructed labs on topics ranging from UI development to intermediate C++ and Java.
             </p>
           </div>
-          <div class="about-docs" id="about-docs" style="display:none;">
-            <!-- populated by renderer if cv/resume links are present -->
-          </div>
+          <div class="about-docs" id="about-docs" style="display:none;"></div>
+          <div class="about-social" id="about-social"></div>
         </div>
       </div>
     </div>
 
-    <!-- Posts section -->
-    <section class="posts-section">
-      <div class="container">
+    <!-- Posts Section -->
+    <section class="posts-section" id="posts-section">
+      <div class="section-header">
+        <h2 class="section-title">Research, Projects, and Updates</h2>
+      </div>
 
-        <!-- Tabs + Tag filter -->
-        <div class="controls-row">
-          <div class="tab-bar" id="tab-bar">
-            <!-- populated by Controls.build() -->
-          </div>
-          <div class="filter-bar">
-            <span class="filter-label">Tag</span>
-            <select class="filter-select" id="tag-filter" onchange="app.controls.onTagChange(this.value)">
-              <option value="">All tags</option>
-              <!-- populated by Controls._populateTagFilter() -->
-            </select>
-          </div>
+      <div class="controls-row">
+        <div class="tab-bar" id="tab-bar"></div>
+        <div class="filter-bar">
+          <span class="filter-label">Tag</span>
+          <select class="filter-select" id="tag-filter" onchange="app.controls.onTagChange(this.value)">
+            <option value="">All tags</option>
+          </select>
         </div>
+      </div>
 
+      <div class="posts-grid-wrap">
         <div class="posts-grid" id="posts-grid">
-          <div class="loading"><div class="loading-dot"></div></div>
+          <div class="loading">
+            <div class="loading-dot"></div>
+            <div class="loading-dot"></div>
+            <div class="loading-dot"></div>
+          </div>
         </div>
-
       </div>
     </section>
 
+    <!-- Photo Album Section (rendered by JS if photos exist) -->
+    <div id="photo-section-mount"></div>
+
+    <!-- Lightbox (rendered by JS) -->
+    <div id="lightbox-mount"></div>
+
     <footer class="site-footer">
       <div class="footer-inner">
-        <span class="footer-name" id="footer-name">Your Name</span>
+        <span class="footer-name" id="footer-name">Aaron Moseley</span>
         <div class="footer-links">
           <a href="#" id="footer-email">Email</a>
           <a href="#" id="footer-linkedin" target="_blank" rel="noopener">LinkedIn</a>
@@ -82,9 +88,8 @@
       </div>
     </footer>
 
-  </div><!-- /page-home -->
-
-</div><!-- /app -->
+  </div>
+</div>
 
 <script type="module" src="js/app.js"></script>
 </body>

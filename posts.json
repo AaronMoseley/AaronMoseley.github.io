@@ -202,10 +202,39 @@
       "tab": "Projects",
       "links": [
         { "label": "Download", "url": "downloads/PhantomMansion.zip" },
-        { "label": "Github",     "url": "https://github.com/AaronMoseley/CatHacks8" },
-        { "label": "Hackathon Submission",  "url": "https://devpost.com/software/phantom-mansion" }
+        { "label": "Github",   "url": "https://github.com/AaronMoseley/CatHacks8" },
+        { "label": "Hackathon Submission", "url": "https://devpost.com/software/phantom-mansion" }
       ],
       "related": []
+    }
+  ],
+  "photos": [
+    {
+      "album": "Bonita Springs",
+      "date": "04-2026",
+      "images": [
+        {
+          "file": "images/photography/BonitaSprings/P1000086.png"
+        },
+        {
+          "file": "images/photography/BonitaSprings/P1000087.png"
+        },
+        {
+          "file": "images/photography/BonitaSprings/P1000094.png"
+        },
+        {
+          "file": "images/photography/BonitaSprings/P1000096.png"
+        },
+        {
+          "file": "images/photography/BonitaSprings/P1000120.png"
+        },
+        {
+          "file": "images/photography/BonitaSprings/P1000127.png"
+        },
+        {
+          "file": "images/photography/BonitaSprings/P1000135.png"
+        }
+      ]
     }
   ]
 }
