@@ -210,6 +210,33 @@
   ],
   "photos": [
     {
+      "album": "Hawaii, Hawaii",
+      "date": "06-2026",
+      "images": [
+        {
+          "file": "images/photography/Hawaii/P1000345.png"
+        },
+        {
+          "file": "images/photography/Hawaii/P1000374.png"
+        },
+        {
+          "file": "images/photography/Hawaii/P1000393.png"
+        },
+        {
+          "file": "images/photography/Hawaii/P1000305.png"
+        },
+        {
+          "file": "images/photography/Hawaii/P1000300.png"
+        },
+        {
+          "file": "images/photography/Hawaii/P1000398.png"
+        },
+        {
+          "file": "images/photography/Hawaii/0012_14A.jpg"
+        }
+      ]
+    },
+    {
       "album": "Raven Run",
       "date": "04-2026",
       "images": [
