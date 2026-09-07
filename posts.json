@@ -13,6 +13,19 @@
   },
   "posts": [
     {
+        "slug": "fidar",
+        "file": "posts/fidar.md",
+        "cover": "images/fidar-thumbnail.png",
+        "tab": "Projects",
+        "links": [
+          {"label": "FIDAR Video", "url": "https://www.youtube.com/watch?v=P7eG6DXP6WM"},
+          {"label": "FIDAR", "url": "https://github.com/AaronMoseley/FIDAR"},
+          {"label": "Volt Engine", "url": "https://github.com/AaronMoseley/VoltEngine"},
+          {"label": "Machine Learning Setup", "url": "https://github.com/AaronMoseley/DepthPrediction"}
+        ],
+        "related": ["volt-engine"]
+    },
+    {
         "slug": "polycl-journal",
         "file": "posts/polycl-journal.md",
         "cover": "images/PolyCL.png",
