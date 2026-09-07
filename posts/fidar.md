@@ -14,7 +14,7 @@ Additionally, I switched to Linux between the last update and now. So, I had to 
 
 Now that the engine was ready, I needed something to show it off with. I decided on a basic 3D point cloud generator that I have called FIDAR (fake LIDAR). The idea is it can take in multiple images from different positions, predict the depth of each pixel, and use the predictions to recreate 3D scenes as point clouds. The feasibility of this is up for debate as it's very difficult to get a model to make all of the predictions from different images align. But, it's a good proof-of-concept anyway.
 
-I developed a model using ideas from the following papers. It ended up being a UNet-like model with a coarse and fine branch, both feeding into the decoder. It has some heavily modified blocks in the encoder and I've seen some pretty good performance with it. The source code for the model is linked at the bottom of the page if you want to check it out
+I developed a model using ideas from the following papers. It ended up being a UNet-like model with a coarse and fine branch, both feeding into the decoder. It has some heavily modified blocks in the encoder and I've seen some pretty good performance with it. The source code for the model is linked at the bottom of the page if you want to check it out.
 
 - [Depth Map Prediction from a Single Image using a Multi-Scale Deep Network](https://arxiv.org/abs/1406.2283)
 - [UNet](https://arxiv.org/pdf/1505.04597)
