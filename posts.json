@@ -13,6 +13,17 @@
   },
   "posts": [
     {
+        "slug": "fidar-drone",
+        "file": "posts/fidar-drone.md",
+        "cover": "images/fidar-drone-thumbnail.png",
+        "tab": "Projects",
+        "links": [
+          {"label": "Video", "url": "https://www.youtube.com/watch?v=-XhoT2FXh9s"},
+          {"label": "Github", "url": "https://github.com/AaronMoseley/FIDAR"}
+        ],
+        "related": ["fidar", "volt-engine"]
+    },
+    {
         "slug": "fidar",
         "file": "posts/fidar.md",
         "cover": "images/fidar-thumbnail.png",
