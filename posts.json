@@ -234,6 +234,33 @@
   ],
   "photos": [
     {
+      "album": "Red River Gorge",
+      "date": "10-2026",
+      "images": [
+        {
+          "file": "images/photography/RedRiverGorge/P1000455.png"
+        },
+        {
+          "file": "images/photography/RedRiverGorge/P1000463.png"
+        },
+        {
+          "file": "images/photography/RedRiverGorge/P1000472.png"
+        },
+        {
+          "file": "images/photography/RedRiverGorge/P1000473.png"
+        },
+        {
+          "file": "images/photography/RedRiverGorge/P1000490.png"
+        },
+        {
+          "file": "images/photography/RedRiverGorge/P1000512.png"
+        },
+        {
+          "file": "images/photography/RedRiverGorge/P1000518.png"
+        }
+      ]
+    },
+    {
       "album": "Hawaii, Hawaii",
       "date": "06-2026",
       "images": [
