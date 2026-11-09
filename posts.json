@@ -234,6 +234,33 @@
   ],
   "photos": [
     {
+      "album": "Cumberland Falls",
+      "date": "11-2026",
+      "images": [
+        {
+          "file": "images/photography/CumberlandFalls/P1000523.png"
+        },
+        {
+          "file": "images/photography/CumberlandFalls/P1000528.png"
+        },
+        {
+          "file": "images/photography/CumberlandFalls/P1000532.png"
+        },
+        {
+          "file": "images/photography/CumberlandFalls/P1000559.png"
+        },
+        {
+          "file": "images/photography/CumberlandFalls/P1000566.png"
+        },
+        {
+          "file": "images/photography/CumberlandFalls/P1000573.png"
+        },
+        {
+          "file": "images/photography/CumberlandFalls/P1000581.png"
+        }
+      ]
+    },
+    {
       "album": "Red River Gorge",
       "date": "10-2026",
       "images": [
